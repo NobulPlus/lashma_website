@@ -6,7 +6,7 @@ import logo from '../../assets/lashma-logo.png'
 const Navbar = () => {
   return (
     <nav className='container'>
-      <img src={logo} alt="" className='logo' />
+      <img src={logo} alt="LASHMA logo" className='logo' />
       <ul>
         <li>Home</li>
         <li>Gallery</li>
