@@ -7,7 +7,13 @@
   font-family: "Outfit", sans-serif;
 }
 body{
-  background: #f5f5f5;
+  background-color: #f8f8f8;
+  /* background: #858484; */
+}
+p{
+  line-height: 30px;
+  font-size: 18px;
+  text-align: justify;
 }
 a{
   text-decoration: none;
@@ -15,9 +21,55 @@ a{
   line-height: 1;
   cursor: pointer;
 }
+li{
+  list-style-type: none;
+}
+button{
+  border: none;
+}
+.row{
+  width: 50%;
+}
+button{
+  padding: 17px 30px;
+  background-color: #fff;
+  color: #f28201;
+  font-weight: 600;
+  border: none;
+  margin: 30px 10px 0 0;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 24px 36px -11px rgba(0 0 0 /9%);
+}
+button i {
+  margin-left: 20px;
+}
+button:hover{
+  box-shadow: none;
+}
+.primary-btn{
+  background-color: #f28201 ;
+  color: #fff;
+}
+#heading h3{
+  font-weight: 600;
+  font-size: 25px;
+  letter-spacing: 1px;
+  color: #f28201;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 5px #000;
+}
+#heading h1{
+  margin: 20px 0;
+  font-weight: 100;
+  font-style: italic;
+  text-transform: capitalize;
+}
 .container{
-  padding-left: 10%;
-  padding-right: 10%;
+  /* padding-left: 10%;
+  padding-right: 10%; */
+  max-width: 85%;
+  margin: auto;
 }
 .btn{
   background: #f28201;
@@ -35,4 +87,24 @@ a{
 .btn img{
   width: 20px;
   margin-left: 10px;
+}
+.flexSB{
+  display: flex;
+  justify-content: space-between;
+}
+.icon{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  /* color: #1eb2a6; */
+  transition: 0.5s;
+}
+.icon:hover{
+  cursor: pointer;
+  background-color: #8f8f8f;
+  font-weight: bold;
+  /* color: #fff; */
 }
