@@ -46,13 +46,16 @@ header ul li a{
     transition: 0.5s;
 }
 header ul li a:hover{
-    color:  #f28201;
+    color:  #000;
 }
 .start{
     background-color: #f28201;
     padding: 30px 70px;
     color: #fff;
     clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+}
+.button{
+    cursor: pointer;
 }
 .toggle{
     display: none;

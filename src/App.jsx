@@ -5,6 +5,7 @@ import React from 'react'
 import Header from './Components/Heading/Header'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Home from './Components/Home/Home'
+import YoutubeVid from './Components/YoutubeVid/YoutubeVid'
 
 
 function App(){
@@ -15,6 +16,8 @@ function App(){
         <Routes>
           <Route path='/' element={<Home />} />
         </Routes>
+        <YoutubeVid/>
+        
       </Router>
       {/* <Navbar/> */}
       {/* <Hero/> */}

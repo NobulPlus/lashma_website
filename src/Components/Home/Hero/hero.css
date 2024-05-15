@@ -24,6 +24,10 @@
     .margin{
         height: 48vh;
     }
+    p{
+        display: none;
+        visibility: hidden;
+    }
     .hero{
         background-position: right;
         padding-top: 50%;
