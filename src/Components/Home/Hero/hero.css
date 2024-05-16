@@ -24,7 +24,7 @@
     .margin{
         height: 48vh;
     }
-    p{
+    .row_body{
         display: none;
         visibility: hidden;
     }

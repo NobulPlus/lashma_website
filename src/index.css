@@ -66,10 +66,10 @@ button:hover{
   text-transform: capitalize;
 }
 .container{
-  /* padding-left: 10%;
-  padding-right: 10%; */
-  max-width: 85%;
-  margin: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  /* max-width: 85%; */
+  /* margin: auto; */
 }
 .btn{
   background: #f28201;

@@ -33,7 +33,7 @@ function App() {
       <VideoPlayer videoData={videoData3} />
     </div>
     </div>
-    <div className="margin"></div>
+    {/* <div className="margin"></div> */}
     </>
   );
 }
