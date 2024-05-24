@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Home from './Components/Home/Home'
 import YoutubeVid from './Components/YoutubeVid/YoutubeVid'
 import About from './Components/About/About'
+import Card  from './Components/Card/Card'
 
 
 function App(){
@@ -20,6 +21,7 @@ function App(){
         <YoutubeVid/>
         {/* <div className="container"> */}
           <About/>
+          <Card /> 
         {/* </div> */}
         
       </Router>

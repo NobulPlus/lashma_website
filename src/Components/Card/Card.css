@@ -1,0 +1,42 @@
+.plans{
+    padding: 50px;
+    width: 100%;
+}
+.plans_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+}
+.overflow{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+.card:hover{
+    border-color: var(--color-primary-variant);
+    background: rgb(224, 224, 224);
+
+}
+.text{
+    position: relative;
+    flex-basis: 100%;
+}
+.more{
+    padding: 25px;
+}
+.link{
+    color: var(--color-primary);
+}
+.more_link{
+    display: inline-block; /* Ensures the icon stays inline */
+    width: fit-content; /* Adjust width as needed */
+    height: fit-content; /* Adjust height as needed */
+    padding: 5px; /* Adjust padding for border thickness */
+    padding: 5px;
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+}
+.more_link:hover{
+    background-color: var(--color-secondary-variant);
+}
