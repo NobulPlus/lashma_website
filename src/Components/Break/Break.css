@@ -1,0 +1,9 @@
+.break{
+    padding: 25px;
+    background-image: url(../../assets/All/import/bg1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    /* Filter to dim the image */
+    background-color: rgba(0, 0, 0, 0.0); /* Transparent background */
+    filter: brightness(0.8); /* Adjust brightness (1.0 = normal) */
+}
