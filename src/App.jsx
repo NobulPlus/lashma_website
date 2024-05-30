@@ -10,6 +10,7 @@ import About from './Components/About/About'
 import Card  from './Components/Card/Card'
 import Break from './Components/Break/Break'
 import Stat from './Components/Stat/Stat'
+// import Testimonial from './Components/Testimonial/Testimonial'
 
 
 function App(){
@@ -26,6 +27,7 @@ function App(){
           <Card />
           <Break />
           <Stat /> 
+          {/* <Testimonial /> */}
         {/* </div> */}
         
       </Router>
