@@ -8,9 +8,9 @@ const Break = () => {
     <>
     <div className="break">
         <div className="content container">
-          <Marquee>
+          <Marquee speed={60} gradient={false} pauseOnHover>
             <h4>
-                Are you a Lagos State civil servant and you have not registered on ILERA EKO health insurance scheme? <Link to='#'>Register Now!!!</Link>
+                Are you a Lagos State civil servant and you have not registered on ILERA EKO health insurance scheme? <Link to='#' className='btn-primary'>Register Now!!! </Link>
             </h4>
           </Marquee>
         </div>        

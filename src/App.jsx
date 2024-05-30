@@ -9,6 +9,7 @@ import YoutubeVid from './Components/YoutubeVid/YoutubeVid'
 import About from './Components/About/About'
 import Card  from './Components/Card/Card'
 import Break from './Components/Break/Break'
+import Stat from './Components/Stat/Stat'
 
 
 function App(){
@@ -23,7 +24,8 @@ function App(){
         {/* <div className="container"> */}
           <About/>
           <Card />
-          <Break /> 
+          <Break />
+          <Stat /> 
         {/* </div> */}
         
       </Router>

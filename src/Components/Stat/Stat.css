@@ -1,0 +1,40 @@
+.content{
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.item{
+    width: 200px;
+    height: 200px;
+    /* background-color: var(--color-primary); */
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.item-more{
+    flex: 0.5;
+}
+.stat{
+    color: var(--color-primary);
+}
+.item-head{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+    color: var(--color-primary);
+}
+.item-text{
+    font-size: small;
+    /* color: red; */
+}
+.item-icon{
+    font-size: 50px;
+}
+.item-2{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
