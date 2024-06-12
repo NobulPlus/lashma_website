@@ -10,6 +10,7 @@ import Break from './Components/Break/Break'
 import Stat from './Components/Stat/Stat'
 import Gmaps from './Components/GMaps/Gmaps'
 import Telemedicine from './Components/Telemedicine/Telemedicine'
+import Programs from './Components/Programs/Programs'
 
 
 function App(){
@@ -27,6 +28,7 @@ function App(){
           <Stat />
           <Telemedicine />
           <Gmaps />
+          <Programs />
       </Router>
     </>
   )

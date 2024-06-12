@@ -39,3 +39,13 @@
 .AppStore, .PlayStore{
     padding: 0 10px;
 }
+
+@media (max-width: 768px){
+    .subtitle-text, .title{
+        display: none;
+        color: rebeccapurple;
+    }
+    .telemedicine-button{
+        width: 15em;
+    }
+}

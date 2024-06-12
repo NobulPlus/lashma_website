@@ -10,12 +10,12 @@ const Telemedicine = () => {
     <>
         <div className="Tmed">
             <div className="right-side">
-                <img src={Telemed} alt="" />
+                <img className='telemed-image' src={Telemed} alt="" />
             </div>
             <div className="left-side">
                 <div className="title"><h1>Telemedicine</h1></div>
                 <div className="sub-title">
-                    <h3>Don’t <br/>Google your <br/>symptoms</h3>
+                    <h3 className='subtitle-text'>Don’t <br/>Google your <br/>symptoms</h3>
                 </div>
                 <div className="text">
                     <p>Speak to a doctor from the comfort of your home</p>
