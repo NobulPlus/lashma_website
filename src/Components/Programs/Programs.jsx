@@ -3,11 +3,14 @@ import './Programs.css'
 
 const Programs = () => {
   return (
-    <div className='programs'>
-      <div className="program">
-        <img src="" alt="" />
+    <>
+      <div className="product">
+        <div className="ileraeko">Slide 1</div>
+        <div className="regulation">Slide 2</div>
+        <div className="ekotelemed">Slide 3</div>
+        <div className="ekosha">Slide 4</div>
       </div>
-    </div>
+    </>
   )
 }
 
