@@ -19,6 +19,10 @@
 .margin{
   margin-top: 40%;
 }
+.title-container p{
+  margin: 0 auto;
+  width: 70%;
+}
 
 @media only screen and (max-width: 768px) {
   

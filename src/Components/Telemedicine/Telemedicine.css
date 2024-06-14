@@ -48,4 +48,7 @@
     .telemedicine-button{
         width: 15em;
     }
+    .text{
+        margin: 0 15px auto;
+    }
 }

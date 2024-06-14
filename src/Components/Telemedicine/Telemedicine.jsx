@@ -10,7 +10,7 @@ const Telemedicine = () => {
     <>
         <div className="Tmed">
             <div className="right-side">
-                <img className='telemed-image' src={Telemed} alt="" />
+                <img className='' src={Telemed} alt="" />
             </div>
             <div className="left-side">
                 <div className="title"><h1>Telemedicine</h1></div>

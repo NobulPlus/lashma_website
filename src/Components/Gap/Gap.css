@@ -1,0 +1,55 @@
+.gap{
+    width: 100%;
+    background-image: url('../../assets/All/import/gap-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 25px;
+}
+.gap-container{
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* background-color: aqua; */
+}
+.left-gap{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    text-shadow: 0px 0px 5px #fff;
+}
+.left-text{
+    font-size: 2em;
+}
+.right-gap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    padding-left: 50px;
+    width: 100%;
+}
+.right-text{
+    width: 75%;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-shadow: 0px 0px 1px #fff;
+}
+.gap-button{
+    display: flex;
+    justify-content: right;
+    padding: 15px 0;
+}
+.gap-button button{
+    margin: 15px;
+}
+.gap-button button:hover{
+    border: 1px solid #fff;
+}
+.contact{
+    background-color: transparent;
+    border: 1px solid white;
+    color: #000;
+}

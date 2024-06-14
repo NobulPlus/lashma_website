@@ -16,7 +16,7 @@ const VideoPlayer = ({ videoData }) => {
         {type === 'other' && <ReactPlayer url={url} width="100%" height="200px" />}   
       </div>    
         <div className="title-container">
-            <h3>{title}</h3>
+            <p>{title}</p>
         </div>
     </div>
   );

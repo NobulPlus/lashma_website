@@ -4,20 +4,20 @@ import VideoPlayer from './VideoPlayer';
 
 const videoData1 = {
   type: 'youtube',
-  url: 'https://youtu.be/cLRztK1zE6s?si=S29-7t-x_wU8YFu3',
-  title: 'Video Title 1',
+  url: 'https://youtu.be/DAYL2Jn-0rE',
+  title: 'Mrs. Florence Oluwabusayo shares her experience with ILERA EKO',
 };
 
 const videoData2 = {
   type: 'other',
-  url: 'https://www.youtube.com/watch?v=mIZDZIqdR7Y&t=129s', // Replace with your non-YouTube video URL
-  title: 'Video Title 2',
+  url: 'https://youtu.be/2Syl8MtuKmo', // Replace with your non-YouTube video URL
+  title: 'Testimony from ita elewa primary health center igbogbo bayeku LCDA',
 };
 
 const videoData3 = {
   type: 'other',
-  url: 'https://www.youtube.com/watch?v=mIZDZIqdR7Y&t=129s', // Replace with another non-YouTube video URL
-  title: 'Video Title 3',
+  url: 'https://youtu.be/QsTMZ2dRV9o', // Replace with another non-YouTube video URL
+  title: 'Mr  Solomon John shares enconter with ILERA EKO',
 };
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
     <>
     <div className="video-container">
     <div className="title"> 
-      <h2>Our Testimonial</h2>
+      <h3>Our Testimonial</h3>
     </div>
     <div className="video-content">
       <VideoPlayer videoData={videoData1} />

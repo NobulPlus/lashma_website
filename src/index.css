@@ -120,3 +120,6 @@ button:hover{
   font-weight: bold;
   /* color: #fff; */
 }
+i{
+  color: var(--color-primary);
+}

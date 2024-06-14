@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
+import ScrollToTop from 'react-scroll-to-top'
 import Header from './Components/Heading/Header'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Home from './Components/Home/Home'
@@ -11,11 +12,13 @@ import Stat from './Components/Stat/Stat'
 import Gmaps from './Components/GMaps/Gmaps'
 import Telemedicine from './Components/Telemedicine/Telemedicine'
 import Programs from './Components/Programs/Programs'
-
+import Gap from './Components/Gap/Gap'
+import Footer from './Components/Footeer/Footer'
 
 function App(){
   return (
     <>
+    <ScrollToTop smooth/>
       <Router>
         <Header/>
         <Routes>
@@ -29,6 +32,8 @@ function App(){
           <Telemedicine />
           <Gmaps />
           <Programs />
+          <Gap />
+          <Footer/>
       </Router>
     </>
   )

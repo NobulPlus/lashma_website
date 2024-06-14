@@ -1,0 +1,161 @@
+.sb_footer{
+    width: 100%;
+    margin: 50px 0 auto;
+    padding: 25px;
+}
+.sb_footer h4{
+    font-weight: 300;
+}
+.sb_footer ul {
+    padding: px 0 auto;
+    list-style-type: none;
+    padding: 0;  Optional: Remove default padding if needed
+}
+.footer_links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.sb_div1{
+    width: 30%;
+}
+.input-group{
+    position: relative;
+    margin: 20px 0;
+    padding: 5px 0;
+}
+.input-group input{
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: var(--color-secondary);
+    padding: 0 10px;
+    margin: 5px 0 auto;
+    background: transparent;
+    border: 1.2px solid var(--color-primary-variant);
+    outline: none;
+    border-radius: 5px;
+}
+.email-input:focus,
+.name-input:focus {
+  border: 1.2px solid var(--color-primary);
+  box-shadow: 0 0 5px rgba(var(--color-primary-variant), 0.5);
+  color: #000;
+}
+.form-button{
+    width: 320px;
+    background-image: url('../../assets/All/import/button-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #000;
+    border-radius: 5px;
+    margin: 5px 0 auto;
+}
+.sb_div2 {
+    display: flex; /* Make sb_div2 a flex container */
+    flex-direction: column;
+}
+.sb_div2 li{
+    padding: 5px;
+    font-size: medium;
+}
+.sb_div2-links{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+.sb_div2-links p{
+    font-size: 4vmin;
+    margin: 0;
+}
+.sb_div2-links i{
+    color: var(--color-primary);
+    margin: 0 10px;
+    padding: 10px; /* Adjust padding for desired icon size */
+    border-radius: 50%; /* Create circle border */
+    border: 1px solid var(--color-primary); /* Add solid border */
+    transition: background-color 0.2s ease-in-out; /* Add hover effect */
+  
+}
+.sb_div2-links i:hover{
+    background-color: var(--color-primary);
+    outline: none;
+    color: white;
+}
+.sb_footer-below{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0.2rem;;
+}
+.sb_footer-below-links{
+    display: flex;
+    flex-direction: row;
+}
+.sb_footer-below-links p{
+    font-size: 13px;
+    line-height: 15px;
+    margin-left: 2rem;
+    color:#000;
+    font-weight: 600;
+}
+hr{
+    width: 100%;
+}
+.sb_footer-copyright p{
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 600;
+}
+/* Media query for mobile devices (adjust breakpoint as needed) */
+@media screen and (max-width: 768px) {
+    .footer_links {
+      flex-direction: column; /* Stack sections vertically on mobile */
+      align-items: center; /* Center content horizontally */
+    }
+  
+    .sb_div1,
+    .sb_div2,
+    .sb_div3,
+    .sb_div4 {
+      width: 100%; /* Make sections full width on mobile */
+      margin-bottom: 20px; /* Add spacing between sections */
+    }
+  
+    .sb_div2 {
+      flex-direction: column; /* Change to row for icons on mobile */
+      justify-content: space-between; /* Distribute icons horizontally */
+    }
+  
+    .sb_div2-links {
+      margin-top: 10px; /* Add some top margin for spacing */
+    }
+  
+    .sb_div2-links p {
+      font-size: 14px; /* Adjust font size for mobile */
+    }
+  
+    .sb_div2-links i {
+      margin: 5px; /* Reduce spacing between icons on mobile */
+    }
+  
+    .sb_footer-below {
+      flex-direction: column; /* Stack copyright and links vertically */
+    }
+  
+    .sb_footer-below-links {
+      margin-top: 10px; /* Add top margin for spacing */
+      justify-content: center; /* Center links horizontally */
+    }
+  
+    .sb_footer-below-links p {
+      margin-left: 0; /* Remove left margin for links */
+      text-align: center;/* Center text for links */
+      padding: 0 5px;
+    }
+  
+    .sb_footer-copyright p {
+      text-align: center; /* Center copyright text */
+    }
+  }
