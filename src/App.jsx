@@ -18,6 +18,10 @@ import ReactGA from 'react-ga4';
 
 function App() {
   ReactGA.initialize('G-16Y7GXWY2D');
+  ReactGA.send({
+    hitType: "pageview",
+    page: window.location.pathname,
+  })
   return (
     <>
       <ScrollToTop smooth />

@@ -15,9 +15,8 @@ import ReactGA from 'react-ga4'
 const Home = () => {
   ReactGA.send({
     hitType: "pageview",
-    page: "/",
-    title: "Home",
-  });
+    page: window.location.pathname,
+  })
   return (
     <>
       <Hero/>
