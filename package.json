@@ -1,5 +1,6 @@
 {
   "name": "lashma_website",
+  "homepage": "http://lashma.com/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -21,6 +22,7 @@
     "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",
     "react-fast-marquee": "^1.6.4",
+    "react-ga4": "^2.1.0",
     "react-icons": "^5.2.1",
     "react-owl-carousel": "^2.3.3",
     "react-player": "^2.16.0",

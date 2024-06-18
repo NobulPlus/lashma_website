@@ -2,6 +2,7 @@
 import React from 'react'
 import './Navbar.css'
 import logo from '../../assets/lashma-logo.png'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -13,7 +14,7 @@ const Navbar = () => {
         <li>Plans</li>
         <li>Our Network</li>
         <li>Contact Us</li>
-        <li><button className='btn'>Enroll ILERA EKO</button></li>
+        <li><Link to='https://selfregistration.lshsportal.com:467/'>Enroll ILERA EKO</Link></li>
       </ul>
     </nav>
   )

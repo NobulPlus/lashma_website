@@ -1,0 +1,14 @@
+.partner{
+    text-align: center;
+}
+.image_wrapper{
+    display: inline-flex; /* Ensure side-by-side display */
+    margin: 50px; /* Maintain spacing between logos */
+    align-items: center; /* Vertically center images */
+    justify-content: center;
+}
+.image_wrapper img{
+    width: 100px; /* Set desired image width */
+    height: 100px; /* Set desired image height */
+    /* object-fit: cover; */
+}

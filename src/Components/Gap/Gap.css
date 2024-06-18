@@ -48,6 +48,10 @@
 .gap-button button:hover{
     border: 1px solid #fff;
 }
+.gap-button .get_started a{
+    color: #000;
+    text-decoration: none;
+}
 .contact{
     background-color: transparent;
     border: 1px solid white;
