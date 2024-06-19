@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Hero from './Hero/Hero'
 import YoutubeVid from '../YoutubeVid/YoutubeVid';
 import About from '../About/About'
@@ -13,10 +13,11 @@ import Partner from '../Partner/Partner'
 import ReactGA from 'react-ga4'
 
 const Home = () => {
-  ReactGA.send({
-    hitType: "pageview",
-    page: window.location.pathname,
-  })
+
+  useEffect (() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <>
       <Hero/>

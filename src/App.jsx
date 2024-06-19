@@ -16,12 +16,9 @@ import Footer from './Components/Footeer/Footer'; // Fix typo (Footer)
 import Partner from './Components/Partner/Partner';
 import ReactGA from 'react-ga4';
 
+ReactGA.initialize('G-16Y7GXWY2D');
+
 function App() {
-  ReactGA.initialize('G-16Y7GXWY2D');
-  ReactGA.send({
-    hitType: "pageview",
-    page: window.location.pathname,
-  })
   return (
     <>
       <ScrollToTop smooth />
