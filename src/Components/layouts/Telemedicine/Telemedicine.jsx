@@ -1,8 +1,8 @@
 import React from 'react'
 import './Telemedicine.css'
-import Telemed from '../../assets/All/import/telemedicine.jpg'
-import AppStore from '../../assets/All/import/AppStore.png'
-import PlayStore from '../../assets/All/import/PlayStore.png'
+import Telemed from '../../../assets/All/import/telemedicine.jpg'
+import AppStore from '../../../assets/All/import/AppStore.png'
+import PlayStore from '../../../assets/All/import/PlayStore.png'
 import { Link } from 'react-router-dom'
 
 const Telemedicine = () => {

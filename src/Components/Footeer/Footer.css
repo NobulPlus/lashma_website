@@ -39,6 +39,11 @@
     outline: none;
     border-radius: 5px;
 }
+/* Target the email and name input elements within the form */
+.form-group .email-input,
+.form-group .name-input {
+  color: black;
+}
 .email-input:focus,
 .name-input:focus {
   border: 1.2px solid var(--color-primary);

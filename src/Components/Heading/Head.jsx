@@ -7,7 +7,7 @@ const Head = () => {
       <section className='head'>
         <div className="container flexSB">
             <div className="logo">
-                <img src={logo} alt="" className='logo_pics'/>
+                {/* <img src={logo} alt="" className='logo_pics'/> */}
             </div>
 
             <div className="social">

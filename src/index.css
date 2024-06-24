@@ -60,11 +60,16 @@ button:hover{
 }
 .primary-btn{
   background-color: #f28201 ;
-  color: #fff;
+  color: #ff0000;
   cursor: pointer;
 }
 .primary-btn i{
   color: #fff;
+}
+.secondary-btn{
+  background-color: var(--color-primary) ;
+  color: #fff;
+  cursor: pointer;
 }
 #heading h3{
   font-weight: 600;
@@ -84,6 +89,7 @@ button:hover{
 .container{
   padding-left: 10%;
   padding-right: 10%;
+  /* margin: 50px 0; */
   /* max-width: 85%; */
   /* margin: auto; */
 }
@@ -126,4 +132,11 @@ button:hover{
 }
 i{
   color: var(--color-primary);
+}
+.card:hover{
+  border-color: var(--color-primary-variant);
+  background: rgb(224, 224, 224);
+}
+.card{
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }

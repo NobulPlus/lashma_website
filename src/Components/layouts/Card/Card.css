@@ -2,9 +2,6 @@
     padding: 50px;
     width: 100%;
 }
-.card{
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-}
 .plans_container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -15,11 +12,6 @@
     align-items: center;
     justify-content: space-around;
     padding: 15px;
-}
-.card:hover{
-    border-color: var(--color-primary-variant);
-    background: rgb(224, 224, 224);
-
 }
 .text{
     position: relative;

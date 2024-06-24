@@ -14,7 +14,7 @@ const Header = () => {
           <ul className={click ? "mobile-nav" : "flexSB"} onClick={()=> setClick(false)}>
             <li><img src={logo} alt="" className='logo_pics'/></li>
             <li><Link to='/'>Home</Link></li>
-            <li><Link to='/plans'>Plans</Link></li>
+            <li><Link to='https://ileraeko.com/plan/'>Plans</Link></li>
             <li><Link to='/about'>About</Link></li>
             <li><Link to='/ourNetwork'>Our Network</Link></li>
             <li><Link to='/gallery'>Resources</Link></li>

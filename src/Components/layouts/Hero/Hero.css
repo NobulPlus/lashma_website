@@ -1,7 +1,7 @@
 .hero{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(rgba(58, 35, 0, 0.7), rgba(58, 40, 0, 0.7)), url('../../assets/All/MemCard/HERO_1.JPG');
+    background: linear-gradient(rgba(58, 35, 0, 0.7), rgba(58, 40, 0, 0.7)), url('../../../assets/All/MemCard/HERO_1.JPG');
     background-size: cover;
     background-position: center;
     color: #fff;

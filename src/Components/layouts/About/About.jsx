@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css'
-import about_img from '../../assets/All/import/backdrop.png'
-import play_icon from '../../assets/All/import/play-icon.png'
+import about_img from '../../../assets/All/import/backdrop.png'
+import play_icon from '../../../assets/All/import/play-icon.png'
 import { Link } from 'react-router-dom'
 
 const About = () => {

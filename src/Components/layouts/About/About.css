@@ -5,7 +5,7 @@
     justify-content: space-between;
     padding: 50px;
     width: 100%;
-    background-image: url(../../assets/All/import/grey.jpg);
+    background-image: url(../../../assets/All/import/grey.jpg);
     background-size: cover;
     background-attachment: fixed;
     /* Filter to dim the image */

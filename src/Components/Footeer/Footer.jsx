@@ -1,8 +1,34 @@
-import React from 'react'
+import React, {useRef} from 'react'
+import emailjs from '@emailjs/browser'
 import './Footer.css'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
+    const form = useRef();
+
+  const sendDetails = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_wokgw6g', 'template_bdfvaxi', form.current, {
+        publicKey: 'nJb5cZW-Jm_wTpEho',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          console.log("message sent successfully");
+          // Show success message and confirm reload
+          if (confirm("Your email has been sent successfully! Press OK to continue?"))
+            {
+                window.location.reload();
+            }
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          alert("There was an error sending your email. Please try again later.");
+        },
+      );
+  };
   return (
     <>
       <div className="footer">
@@ -11,10 +37,11 @@ const Footer = () => {
                 <div className="sb_div1">
                     <h4>Signup for weekly newsletter</h4>
                     <div className="input-group">
-                        <form action="" className='form-group'>
-                            <input type="text" placeholder='Email' className='email-input'/>
-                            <input type="text"  placeholder='First Name' className='name-input' />
+                        <form ref={form} onSubmit={sendDetails} className='form-group'>
+                            <input type="email" name='user_email' placeholder='Email' className='email-input'/>
+                            <input type="text"  placeholder='First Name' name='user_name' className='name-input' />
                             <button className='form-button'>Subscribe</button>
+                            {/* <input type="submit" value="Subscribe" /> */}
                         </form>
                     </div>
                 </div>
