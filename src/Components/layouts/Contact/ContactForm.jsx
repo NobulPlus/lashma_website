@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
 import emailjs from '@emailjs/browser'
-import './Contact'
+import './Contact.css'
 import contactImg from '../../../assets/All/import/contact.jpg'
 
 const ContactForm = () => {

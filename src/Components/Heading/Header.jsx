@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
   const [click, setClick] = useState(false)
+  const [dropdown, setDropdown] = useState(false);
+
   return (
     <>
       <Head/>
@@ -16,7 +18,21 @@ const Header = () => {
             <li><Link to='/'>Home</Link></li>
             <li><Link to='https://ileraeko.com/plan/'>Plans</Link></li>
             <li><Link to='/about'>About</Link></li>
-            <li><Link to='/ourNetwork'>Our Network</Link></li>
+            <li 
+          className="dropdown" 
+          onMouseEnter={() => setDropdown(true)} 
+          onMouseLeave={() => setDropdown(false)}
+        >
+          <Link to='/ourNetwork'>Our Network</Link>
+          {dropdown && (
+            <ul className="dropdown-content">
+              <li><Link to='https://www.ileraeko.com'>Ilera Eko</Link></li>
+              <li><Link to='https://www.lshsRegulation.com'>LSHS Regulation</Link></li>
+              <li><Link to='https://www.ekosha.org'>EKOSHA</Link></li>
+              <li><Link to='https://lagosstate.gov.ng'>Lagos State</Link></li>
+            </ul>
+          )}
+        </li>
             {/* <li><Link to='/gallery'>Resources</Link></li> */}
             <li><Link to='/contact'>Contact Us</Link></li>
           </ul>
