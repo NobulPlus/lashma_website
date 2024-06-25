@@ -44,13 +44,14 @@ header li{
     margin-right: 40px;
 }
 header ul li a{
-    color: #fff;
+    color: var(--color-main-text);
     font-weight: 500;
     transition: 0.5s;
     text-decoration: none;
 }
 header ul li a:hover{
-    color:  #000;
+    color:  var(--color-primary);
+    font-weight: bold;
 }
 .start{
     background-color: #f28201;

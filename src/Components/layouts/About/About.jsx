@@ -21,7 +21,7 @@ const About = () => {
             </div>
             <div className="button read-more">
                 <button className="primary-btn about-btn">
-                    READ MORE<i className='fa fa-long-arrow-alt-right'></i>
+                    <Link to="/about">READ MORE<i className='fa fa-long-arrow-alt-right'></i></Link>
                 </button>
             </div>
         </div>

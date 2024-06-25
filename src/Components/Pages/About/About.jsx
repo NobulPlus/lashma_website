@@ -1,11 +1,16 @@
 import React from 'react'
+import About from '../../layouts/About/AboutUs'
+import AboutMgt from '../../layouts/About/AboutMgt'
 
-const About = () => {
+const Aboutus = () => {
   return (
-    <div>
-      <h1>Hello</h1>
-    </div>
+    <>
+      <div className="container">
+        <About/>
+        <AboutMgt/>
+      </div>
+    </>
   )
 }
 
-export default About
+export default Aboutus

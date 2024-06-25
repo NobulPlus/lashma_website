@@ -17,7 +17,7 @@ const Header = () => {
             <li><Link to='https://ileraeko.com/plan/'>Plans</Link></li>
             <li><Link to='/about'>About</Link></li>
             <li><Link to='/ourNetwork'>Our Network</Link></li>
-            <li><Link to='/gallery'>Resources</Link></li>
+            {/* <li><Link to='/gallery'>Resources</Link></li> */}
             <li><Link to='/contact'>Contact Us</Link></li>
           </ul>
           <div className="start">

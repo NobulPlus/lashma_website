@@ -13,6 +13,7 @@
 :root{
   --color-primary: #f28201;
   --color-primary-variant: rgba(255, 199, 77, 0.4);
+  --color-main-text: #4d4d4d;
   --color-secondary: rgb(224, 224, 224);
   --color-secondary-variant:rgb(194, 194, 194);
   --color-primary-shadow: 0px 0px 5px #000;
