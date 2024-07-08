@@ -17,6 +17,7 @@ import Partner from './Components/layouts/Partner/Partner';
 import ReactGA from 'react-ga4';
 import Contact from './Components/Pages/Contact/Contact';
 import About from './Components/Pages/About/About';
+import Plan from './Components/Pages/Plan/Plan';
 
 function App() {
   ReactGA.initialize('G-16Y7GXWY2D');
@@ -43,6 +44,7 @@ function App() {
           <Route path="/partner" element={<Partner />} />
           <Route path='/contact' element={<Contact/>} />
           <Route path='/about' element={<About />}/>
+          <Route path='/plan' element={<Plan/>} />
           {/* <Route path="/aboutus" element={<AboutUs />} /> */}
         </Routes>
         <Footer /> {/* Render Footer outside of Routes */}

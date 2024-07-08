@@ -16,7 +16,7 @@ const Header = () => {
           <ul className={click ? "mobile-nav" : "flexSB"} onClick={()=> setClick(false)}>
             <li><img src={logo} alt="" className='logo_pics'/></li>
             <li><Link to='/'>Home</Link></li>
-            <li><Link to='https://ileraeko.com/plan/'>Plans</Link></li>
+            <li><Link to='/plan'>Plans</Link></li>
             <li><Link to='/about'>About</Link></li>
             <li 
           className="dropdown" 
@@ -30,6 +30,7 @@ const Header = () => {
               <li><Link to='https://www.lshsRegulation.com'>LSHS Regulation</Link></li>
               <li><Link to='https://www.ekosha.org'>EKOSHA</Link></li>
               <li><Link to='https://lagosstate.gov.ng'>Lagos State</Link></li>
+              <li><Link to='https://lshs-paypolicy.com:8082/'>Payment Channel</Link></li>
             </ul>
           )}
         </li>

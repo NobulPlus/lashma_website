@@ -17,7 +17,7 @@ const Hero = () => {
                             <i className='fa fa-long-arrow-alt-right'></i>
                         </button>
                         <button className='view-plans'>
-                            <Link to='https://ileraeko.com/plan/'>VIEW PLANS</Link>
+                            <Link to='plan/'>VIEW PLANS</Link>
                             <i className='fa fa-long-arrow-alt-right'></i>
                         </button>
                     </div>
