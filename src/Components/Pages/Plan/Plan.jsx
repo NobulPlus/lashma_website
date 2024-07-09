@@ -17,11 +17,16 @@ import img7 from '../../../assets/images/familySenior.png';
 import img8 from '../../../assets/images/telemedicine.png'
 import img9 from '../../../assets/images/diaspora.png'
 import img10 from '../../../assets/images/img10.png'
-
+import { Helmet } from 'react-helmet-async';
 
 const Plan = () => {
     return (
         <>
+          <Helmet>
+            <title>LASHMA |ILERA PLANS | Your good health, Our mandate</title>
+            <meta name='description' content='Lagos State Health Management Agency. See our ILERA Plans and benefit packages'/>
+            <link rel="canonical" href="/plan" />
+          </Helmet>
           <Head />
           <div id='plans' className='container px-4 py-12 mx-auto'>
             <div className='grid gap-8 md:grid-cols-3'>
