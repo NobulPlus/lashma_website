@@ -2,6 +2,10 @@ import React, {useRef} from 'react'
 import emailjs from '@emailjs/browser'
 import './Footer.css'
 import { Link } from 'react-router-dom'
+import standard from '../../assets/doc/individualStandard.pdf';
+import diaspora from '../../assets/doc/diaspora.pdf';
+import telemedicine from '../../assets/doc/telemedicine.pdf';
+import seniorsPlan from '../../assets/doc/seniorsPlan.pdf';
 
 const Footer = () => {
     const form = useRef();
@@ -57,29 +61,29 @@ const Footer = () => {
                     <div className="sb_div2-links">
                         <p>
                             Follow Us:
-                            <Link><i class="fa-brands fa-facebook"></i></Link>
-                            <Link><i class="fa-brands fa-whatsapp"></i></Link>
-                            <Link><i class="fa-brands fa-instagram"></i></Link>
-                            <Link><i class="fa-brands fa-linkedin"></i></Link>
+                            <Link to='https://www.facebook.com/Lagosstatehealthscheme?mibextid=ZbWKwL'><i class="fa-brands fa-facebook"></i></Link>
+                            <Link to="https://wa.me/2347045358275"><i class="fa-brands fa-whatsapp"></i></Link>
+                            <Link to="https://www.instagram.com/lashma__?igsh=MTdlMm5zYWVqNzN5MA=="><i class="fa-brands fa-instagram"></i></Link>
+                            <Link to='https://www.linkedin.com/company/lagos-state-health-management-agency/'><i class="fa-brands fa-linkedin"></i></Link>
                         </p>
                     </div>
                 </div>
                 <div className="sb_div3">
                     <h4>Navigation</h4>
                     <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Help Desk</li>
-                        <li>FAQ</li>
+                        <li><Link to='/'>Home</Link></li>
+                        <li><Link to='/about'>About</Link></li>
+                        <li><Link to='/contact'>Help Desk</Link></li>
+                        <li><Link to='#'>FAQ</Link></li>
                     </ul>
                 </div>
                 <div className="sb_div4">
                     <h4>Health Insurance</h4>
                     <ul>
-                        <li>Individual & Family Plan</li>
-                        <li>Senior Plan</li>
-                        <li>Diaspora Plan</li>
-                        <li>Corporate Plan</li>
+                        <li><a href={standard}>Standard Plan</a></li>
+                        <li><a href={seniorsPlan}>Senior Plan</a></li>
+                        <li><a href={diaspora}>Diaspora Plan</a></li>
+                        <li><a href={telemedicine}>Telemedicine Plan</a></li>
                     </ul>
                 </div>
             </div>

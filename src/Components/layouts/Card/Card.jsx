@@ -9,7 +9,7 @@ const data = [
     title: 'Explore our plans',
     title_icon: <i className="fa-solid fa-file title-icon"></i>,
     card_text: 'Our care has gone into crafting each of our plans to ensure that you, your family, or your team will have complete coverage for medical needs.',
-    more:<Link to="https://ileraeko.com/plans"><i className='fa fa-long-arrow-alt-right'></i></Link>
+    more:<Link to="/plans"><i className='fa fa-long-arrow-alt-right'></i></Link>
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const data = [
     title: 'Regulation',
     title_icon: <i class="fa-solid fa-hospital-user"></i>,
     card_text: 'Ensuring quality health service is provided as agreed by the health facility and expanding access to high-quality care through licensed HMO companies.',
-    more:<Link to="https://lshsregulations.com/plans"><i className='fa fa-long-arrow-alt-right'></i></Link>
+    more:<Link to="https://lshsregulations.com/"><i className='fa fa-long-arrow-alt-right'></i></Link>
   }
 ]
 

@@ -91,6 +91,14 @@
     outline: none;
     color: white;
 }
+.sb_div3 a{
+  color: black;
+  text-decoration: none;
+}
+.sb_div4 a{
+  color: black;
+  text-decoration: none;
+}
 .sb_footer-below{
     display: flex;
     flex-direction: row;

@@ -109,6 +109,22 @@
     font-weight: 500;
 }
 
+.aboutMgt-card_image {
+    /* Set a width for the image container */
+    width: 100px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .aboutMgt-card_image img {
+    /* Maintain aspect ratio and fit within container */
+    aspect-ratio: 1/1; /* Adjust ratio as needed (e.g., 4/3 for landscape) */
+    width: 100%; /* Fills the available space in the container */
+    object-fit: cover; /* Scales image to cover the container */
+  }
+  
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .aboutus_content {

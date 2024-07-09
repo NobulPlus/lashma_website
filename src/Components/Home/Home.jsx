@@ -11,6 +11,7 @@ import Programs from '../layouts/Programs/Programs'
 import Gap from '../layouts/Gap/Gap'
 import Partner from '../layouts/Partner/Partner'
 import ReactGA from 'react-ga4'
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
 
@@ -21,6 +22,11 @@ const Home = () => {
 
   return (
     <>
+    <Helmet>
+      <title>LASHMA | Your good health, Our mandate</title>
+      <meta name='description' content='Lagos State Health Management Agency. ILERAEKO'/>
+      <link rel="canonical" href="/" />
+    </Helmet>
       <Hero/>
       <YoutubeVid/>
       <About/>

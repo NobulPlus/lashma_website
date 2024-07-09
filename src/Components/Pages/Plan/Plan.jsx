@@ -10,11 +10,13 @@ import standard from '../../../assets/doc/individualStandard.pdf';
 import diaspora from '../../../assets/doc/diaspora.pdf';
 import telemedicine from '../../../assets/doc/telemedicine.pdf';
 import seniorsPlan from '../../../assets/doc/seniorsPlan.pdf';
+import jaara from '../../../assets/doc/jaara.pdf';
 import plusPlan from '../../../assets/doc/plusPlan.pdf';
 import img6 from '../../../assets/images/indSenior.png';
 import img7 from '../../../assets/images/familySenior.png';
 import img8 from '../../../assets/images/telemedicine.png'
 import img9 from '../../../assets/images/diaspora.png'
+import img10 from '../../../assets/images/img10.png'
 
 
 const Plan = () => {
@@ -23,6 +25,27 @@ const Plan = () => {
           <Head />
           <div id='plans' className='container px-4 py-12 mx-auto'>
             <div className='grid gap-8 md:grid-cols-3'>
+              <div className='p-6 bg-blend-luminosity rounded-lg shadow-md'>
+                <div className='title'>
+                  <h3 className='text-2xl font-bold text-black-800'>Standard Jaara</h3>
+                </div>
+                <div className='my-4 body'>
+                  <p>The Jaara Standard Plan offers essential healthcare coverage at a cost-effective price, making it an ideal choice for individuals and families seeking a reliable entry point to health insurance.</p>
+                </div>
+                <div className='items-center justify-between foot'>
+                  <div className='foot-img'>
+                    <img src={img10} alt='Individual Plan' className='mx-auto rounded-full' />
+                  </div>
+                  <div className='flex items-center justify-center pt-12 space-x-4 foot-button'>
+                    <button className='px-4 py-2 text-white bg-gray-600 rounded-md hover:bg-gray-700'>
+                      <Link to='https://selfregistration.lshsportal.com:467/' className='text-white' style={{ textDecoration: 'none' }}>Buy Now</Link>
+                    </button>
+                    <a href={jaara} target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }} className='px-4 py-2 text-gray-600 border border-gray-600 rounded-md hover:bg-gray-100'>
+                      View Plan
+                    </a>
+                  </div>
+                </div>
+              </div>
               <div className='p-6 bg-blue-100 rounded-lg shadow-md'>
                 <div className='title'>
                   <h3 className='text-2xl font-bold text-blue-800'>Standard Plan (Individual)</h3>
