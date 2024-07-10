@@ -9,7 +9,7 @@ jobs:
       uses: actions/checkout@v4
     
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.0
       with:
         server: ftp.m79.78b.mytemp.website
         username: adminFtp@lashma.com
