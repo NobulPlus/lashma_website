@@ -1,37 +1,16 @@
-name: Deploy LASHMA website from GitHub to GoDaddy cPanel
-
-on:  
-  push:
-    branches: [ main ]  
-
-jobs:  
+on: push
+name: 🚀 Deploy website on push
+jobs:
   web-deploy:
-    name: Deploy  
-    runs-on: ubuntu-latest  
-
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3  # Checks out your code from GitHub
-      
-      - name: Set up Node.js 20
-        uses: actions/setup-node@v3
-        with: 
-          node-version: '20'
-      
-      - name: Install dependencies
-        run: npm install  # Replace with your specific command if different
-      
-      - name: Build the project
-        run: npm run build
-      
-      - name: Run tests
-        run: npm run test
-      
-      - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.4
-        with:
-          server: ${{ secrets.GIT_CPANEL_REACT_SERVER }}
-          username: ${{ secrets.GIT_CPANEL_REACT_USER }}
-          password: ${{ secrets.GIT_CPANEL_REACT_PWD }}
-          local-dir: build  # Replace with your build directory if different
-          remote-dir: ${{ secrets.GIT_CPANEL_REACT_DIR }}
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ftp.m79.78b.mytemp.website
+        username: adminFtp@lashma.com
+        password: ${{ secrets.ftp_password }}
