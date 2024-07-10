@@ -1,6 +1,6 @@
 {
   "name": "lashma_website",
-  "homepage": "http://lashma.com/",
+  "homepage": "./",
   "private": true,
   "version": "0.0.0",
   "type": "module",
