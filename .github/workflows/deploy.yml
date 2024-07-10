@@ -16,6 +16,9 @@ jobs:
     - name: List directory contents
       run: ls -la
 
+    - name: Unzip dist.zip
+      run: unzip dist.zip -d dist
+
     - name: Build Project
       run:
         npm install
@@ -28,4 +31,4 @@ jobs:
         username: ${{ secrets.GIT_CPANEL_REACT_USER }}
         password: ${{ secrets.GIT_CPANEL_REACT_PWD }}
         protocol: ${{ secrets.GIT_CPANEL_REACT_PROTOCOL }}
-        local-dir: build/
+        local-dir: dist
