@@ -17,11 +17,6 @@ const Slider = () => {
       img: AboutImg,
     },
     {
-      title: "Team Lead, EKOSHA",
-      name: "Mrs. Tawa Taiwo",
-      img: IMG2,
-    },
-    {
       title: "Head, Finance",
       name: "Mrs. Ojo Aramide",
       img: IMG1,
@@ -37,6 +32,11 @@ const Slider = () => {
     {
       title: "Head, Admin & Human Resource",
       name: "Mrs. Funmi Alonge",
+    },
+    {
+      title: "Team Lead, EKOSHA",
+      name: "Mrs. Tawa Taiwo",
+      img: IMG2,
     },
   ];
 

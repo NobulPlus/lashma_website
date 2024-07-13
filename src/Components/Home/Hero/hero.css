@@ -28,13 +28,18 @@
     text-decoration: none;
     color: var(--color-primary);
 }
+.hero-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
+    gap: 2rem; /* Add gap between columns */
+  }
+  
 @media screen and (max-width: 768px){
     .margin{
         height: 48vh;
     }
-    .row_body{
-        display: none;
-        visibility: hidden;
+    .hero-container {
+        grid-template-columns: 1fr; /* Make it a single column for mobile */
     }
     .hero{
         background-position: right;

@@ -42,7 +42,7 @@
     color: black;
 }
 @media screen and (max-width: 768px){
-    .history, .more{
+    .history, .more, .vision{
         visibility: hidden;
         display: none;
     }

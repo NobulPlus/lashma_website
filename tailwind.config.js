@@ -5,8 +5,22 @@ export default {
     './src/**/*.{vue,js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      clipPath: {
+        custom: 'polygon(10% 0, 100% 0, 100% 100%, 0 100%)',
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities })
+    {
+      const newUtilities = {
+        '.clip-custom': {
+          clipPath: 'polygon(10% 0, 100% 0, 100% 100%, 0 100%)',
+        },
+      };
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  ],
 }
 

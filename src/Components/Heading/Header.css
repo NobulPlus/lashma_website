@@ -1,6 +1,6 @@
 .head{
     padding: 20px 0;
-    /* color: #fff; */
+    background: #f1f5f9;
 }
 .logo h1{
     font-size: 35px;
@@ -31,142 +31,14 @@
 
 /* General styles for the header */
 nav {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    position: fixed;
-    z-index: 10;
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffffcc;
   }
   
   header ul {
-    display: flex;
-    align-items: center;
     padding: 10px 20px;
   }
   
-  header li {
-    margin-right: 30px;
-    list-style: none;
-  }
-  
-  header ul li a {
-    color: var(--color-main-text);
-    font-weight: 500;
-    transition: 0.3s;
-    text-decoration: none;
-    padding: 5px 10px;
-  }
-  
-  header ul li a:hover {
-    color: var(--color-primary);
-    font-weight: bold;
-  }
-  
-  .start {
-    background-color: #f28201;
-    padding: 10px 30px;
-    color: #fff;
-    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
-    transition: 0.3s;
-  }
-  
-  .start:hover {
-    background-color: #d46e00;
-  }
-  
-  .enroll a {
-    color: white;
+  header li a{
+    color: var(--primary-color-variant);
     text-decoration: none;
   }
-  
-  .toggle {
-    display: none;
-    cursor: pointer;
-    color: #fff;
-    font-size: 25px;
-    padding: 10px;
-  }
-  
-  /* Dropdown styles */
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-content {
-    display: none;
-    width: 250px;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    top: 30px;
-    left: 0;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown-content li {
-    list-style: none;
-  }
-  
-  .dropdown-content li a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content li a:hover {
-    background-color: #ddd;
-  }
-  
-  /* Mobile responsiveness */
-  @media screen and (max-width: 768px) {
-    nav {
-      padding: 0;
-    }
-  
-    header ul {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 20px;
-      background-color: #f28201;
-      display: none;
-    }
-  
-    header ul.mobile-nav {
-      display: flex;
-    }
-  
-    header ul li {
-      margin-bottom: 20px;
-      margin-right: 0;
-    }
-  
-    header ul li a {
-      color: #fff;
-    }
-  
-    .start {
-      clip-path: none;
-      width: 100%;
-      text-align: center;
-      padding: 20px 0;
-    }
-  
-    .toggle {
-      display: block;
-      position: absolute;
-      right: 20px;
-      top: 20px;
-    }
-  
-    .dropdown-content {
-      position: static;
-      box-shadow: none;
-    }
-  }
-  
