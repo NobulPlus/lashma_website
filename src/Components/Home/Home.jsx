@@ -12,6 +12,7 @@ import Gap from '../layouts/Gap/Gap'
 import Partner from '../layouts/Partner/Partner'
 import ReactGA from 'react-ga4'
 import { Helmet } from 'react-helmet-async';
+import ModalComponent from '../Modal/ModalComponent';
 
 const Home = () => {
 
@@ -38,6 +39,7 @@ const Home = () => {
       <Programs/>
       <Gap/>
       <Partner/>
+      <ModalComponent/>
     </>
   )
 }

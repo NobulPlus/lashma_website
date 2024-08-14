@@ -16,7 +16,7 @@ const Stat = () => {
               <h1>Statistics</h1>
               <i className="fa-solid fa-square-poll-vertical item-icon"></i>
             </div>
-            <p className='item-text'>We have over 380 and still counting Health Care Providers and Over a million lives as at the end of <b>June</b> 2024 registered on the scheme with numbers continuing to grow.</p>
+            <p className='item-text'>We have over 390 and still counting Health Care Providers and Over a million lives as at the end of <b>July</b> 2024 registered on the scheme with numbers continuing to grow.</p>
           </div>
         </div>
         <div className='items-container'> {/* New responsive container */}
@@ -24,7 +24,7 @@ const Stat = () => {
             <div className="item-2">
               <h1 className='stat'>
                 {counterState && (
-                  <CountUp start={0} end={1064897} duration={5} />
+                  <CountUp start={0} end={1097125} duration={5} />
                 )}
               </h1>
               <h5>Lives</h5>
@@ -34,7 +34,7 @@ const Stat = () => {
             <div className="item-2">
               <h1 className='stat'>
                 {counterState && (
-                  <CountUp start={0} end={384} duration={5} />
+                  <CountUp start={0} end={395} duration={5} />
                 )}
               </h1>
               <h5>Care Providers</h5>
@@ -44,7 +44,7 @@ const Stat = () => {
             <div className="item-2">
               <h1 className='stat'>
                 {counterState && (
-                  <CountUp start={0} end={39602} duration={5} />
+                  <CountUp start={0} end={41972}  duration={5} />
                 )}
               </h1>
               <h5>Maternal Cases</h5>

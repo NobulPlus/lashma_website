@@ -7,7 +7,7 @@ const data = [
     id: 1,
     contact_head_subtitle: 'Office Address',
     contact_head_text_icon: <i class="fa-solid fa-map-pin"></i>,
-    contact_head_body: '17/19 Kafi St, Oregun, Lagos',
+    contact_head_body: 'Good Shepherd House, Opposite Secretariat Gate, Alausa, Ikeja Lagos.',
     contact_head_button: <Link to='https://maps.app.goo.gl/NCT5rVk365iwaQ5Z9'>Find Us</Link>
   },
   {

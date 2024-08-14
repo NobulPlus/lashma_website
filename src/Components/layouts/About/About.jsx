@@ -10,7 +10,7 @@ const About = () => {
       <div className="about">
         <div className="about-left">
             <img src={about_img} alt="" className='about-image'/>
-            <Link to="/#"><img src={play_icon} alt="" className='play-icon'/></Link>
+            <Link to="https://youtu.be/ZfI8Qo8E7U8"><img src={play_icon} alt="" className='play-icon'/></Link>
         </div>
         <div className="about-right">
             <div id='about'>
