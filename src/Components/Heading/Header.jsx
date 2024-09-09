@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from './Head';
 import './Header.css';
 import logo from '../../assets/lashma-logo.png';
@@ -9,7 +9,9 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
   let timeoutId;
+  let prevScrollPos = window.pageYOffset;
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -31,11 +33,34 @@ const Header = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+
+    if (prevScrollPos > currentScrollPos) {
+      setShowHeader(true);
+    } else {
+      setShowHeader(false);
+    }
+    prevScrollPos = currentScrollPos;
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <Head />
-      <header>
-        <nav className='flex justify-between items-center w-[100%] mx-auto fixed z-10 bg-slate-100'>
+      {/* Head Section */}
+      <div className={`fixed w-full z-20 transition-transform duration-300 ease-in-out ${showHeader ? 'translate-y-0' : '-translate-y-full'}`}>
+        <Head />
+      </div>
+
+      {/* Header Section */}
+      <header className={`fixed w-full z-10 bg-slate-100 transition-transform duration-300 ease-in-out ${showHeader ? 'translate-y-[72px]' : '-translate-y-full'}`}>
+        <nav className='flex justify-between items-center w-[100%] mx-auto bg-slate-100'>
           <div className="ml-4">
             <img src={logo} alt="Lashma Logo" className='w-16 logo_pics' />
           </div>
@@ -56,14 +81,14 @@ const Header = () => {
                   <li><Link to='https://lshsregulations.com/' className='hover:bg-[#f1f1f1] py-2 px-4 rounded-md'>LSHS Regulation</Link></li>
                   <li><Link to='/resources' className='hover:bg-[#f1f1f1] py-2 px-4 rounded-md'>Resources</Link></li>
                   <li><Link to='https://ekosha.org' className='hover:bg-[#f1f1f1] py-2 px-4 rounded-md'>EKOSHA</Link></li>
-                  <li><Link to='https://verify-lshs.com:5005' className='hover:bg-[#f1f1f1] py-2 px-4 rounded-md'>LSHS Verification</Link></li>
+                  <li><Link to='https://verify.lshsportal.com:8283/' className='hover:bg-[#f1f1f1] py-2 px-4 rounded-md'>LSHS Verification</Link></li>
                 </ul>
               </li>
               <li><Link to='/contact' className='hover:text-[#495057]'>Contact Us</Link></li>
             </ul>
           </div>
           <div className='flex items-center'>
-            <button className='bg-[#f28201] text-white w-52 px-8 py-2 clip-custom-left hover:bg-slate-400 transition duration-300'>
+            <button className='bg-[#f28201] text-white w-51 px-8 py-2 clip-custom-left hover:bg-slate-400 transition duration-300'>
               <Link to='https://selfregistration.lshsportal.com:467/' className='text-white no-underline'>Enroll ILERA EKO</Link>
             </button>
             <button className='bg-[#000000] text-white px-8 py-2 clip-custom-right hover:bg-slate-400 transition duration-300'>

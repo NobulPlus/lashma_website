@@ -26,14 +26,18 @@ const ModalComponent = () => {
         className="fixed inset-0 z-50 flex items-center justify-center"
         overlayClassName="fixed inset-0 bg-black bg-opacity-50 z-40"
       >
-        <div className="relative p-6 overflow-hidden bg-white rounded-lg shadow-lg">
+        <div className="relative flex items-center justify-center p-1 bg-white rounded-lg shadow-lg max-h-full">
           <button 
             onClick={closeModal} 
-            className="absolute top-0 right-0 mt-4 mr-4 text-2xl text-gray-500 hover:text-gray-700"
+            className="absolute top-0 right-0 mt-4 mr-4 text-xs text-gray-500 hover:text-gray-700"
           >
             &times;
           </button>
-          <img src={image1} alt="Sample" className="w-1/2 h-auto mx-auto" />
+          <img 
+            src={image1} 
+            alt="Sample" 
+            className="max-h-screen w-auto object-contain"
+          />
         </div>
       </Modal>
     </div>

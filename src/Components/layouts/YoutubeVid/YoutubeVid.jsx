@@ -1,6 +1,5 @@
 import React from 'react';
 import VideoPlayer from './VideoPlayer';
-// import './VideoPlayer.css';
 
 const videoData1 = {
   type: 'youtube',
@@ -9,31 +8,27 @@ const videoData1 = {
 };
 
 const videoData2 = {
-  type: 'other',
-  url: 'https://youtu.be/2Syl8MtuKmo', // Replace with your non-YouTube video URL
+  type: 'youtube',
+  url: 'https://youtu.be/2Syl8MtuKmo',
   title: 'Testimony from ita elewa primary health center igbogbo bayeku LCDA',
 };
 
 const videoData3 = {
-  type: 'other',
-  url: 'https://youtu.be/QsTMZ2dRV9o', // Replace with another non-YouTube video URL
-  title: 'Mr  Solomon John shares enconter with ILERA EKO',
+  type: 'youtube',
+  url: 'https://youtu.be/QsTMZ2dRV9o',
+  title: 'Mr. Solomon John shares encounter with ILERA EKO',
 };
 
 function App() {
   return (
     <>
-    <div className="video-container">
-    <div className="title"> 
-      <h3>Our Testimonial</h3>
-    </div>
-    <div className="video-content">
-      <VideoPlayer videoData={videoData1} />
-      <VideoPlayer videoData={videoData2} />
-      <VideoPlayer videoData={videoData3} />
-    </div>
-    </div>
-    {/* <div className="margin"></div> */}
+      <div className="container mx-auto py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <VideoPlayer videoData={videoData1} />
+          <VideoPlayer videoData={videoData2} />
+          <VideoPlayer videoData={videoData3} />
+        </div>
+      </div>
     </>
   );
 }

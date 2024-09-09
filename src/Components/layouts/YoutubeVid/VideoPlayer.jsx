@@ -1,23 +1,21 @@
-import React from 'react'
-import YouTube from 'react-youtube'
-import ReactPlayer from 'react-player'
-import './VideoPlayer.css'
+import React from 'react';
+import YouTube from 'react-youtube';
+import ReactPlayer from 'react-player';
 
 const VideoPlayer = ({ videoData }) => {
-  // Destructure video data (assuming properties like type, url, and title)
   const { type, url, title } = videoData;
 
   return (
-    <div className="video-player">
-      <div className="video-container"> {/* Wrap video in container */}
+    <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4">
+      <div className="w-full">
         {type === 'youtube' && (
-          <YouTube videoId={extractYoutubeId(url)} opts={{ width: '100%', height:'200px' }} /> // Set width to 33.33% for 3 videos
+          <YouTube videoId={extractYoutubeId(url)} opts={{ width: '100%', height: '200px' }} />
         )}
-        {type === 'other' && <ReactPlayer url={url} width="100%" height="200px" />}   
-      </div>    
-        <div className="title-container">
-            <p>{title}</p>
-        </div>
+        {type === 'other' && <ReactPlayer url={url} width="100%" height="200px" />}
+      </div>
+      <div className="mt-4 text-center">
+        <p className="text-lg font-medium">{title}</p>
+      </div>
     </div>
   );
 };
@@ -26,7 +24,7 @@ export default VideoPlayer;
 
 // Helper function to extract YouTube video ID
 function extractYoutubeId(url) {
-  const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/v\/))([^\s\?&]+)/;
+  const regExp = /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|.+\/v\/))([^&\n?#]+)/;
   const match = url.match(regExp);
-  return match && match[5];
+  return match && match[1];
 }

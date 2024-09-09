@@ -18,6 +18,7 @@ import About from './Components/Pages/About/About';
 import Plan from './Components/Pages/Plan/Plan';
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 import ScrollTrigger from 'react-scroll-trigger';
+import ResourcePage from './Components/Pages/Resources/ResoucesPage';
 
 function App() {
   ReactGA.initialize('G-16Y7GXWY2D');
@@ -46,6 +47,7 @@ function App() {
               <Route path='/contact' element={<Contact/>} />
               <Route path='/about' element={<About />}/>
               <Route path='/plan' element={<Plan/>} />
+              <Route path='/resources' element={<ResourcePage/>} />
               {/* <Route path="/aboutus" element={<AboutUs />} /> */}
             </Routes>
           <Footer />

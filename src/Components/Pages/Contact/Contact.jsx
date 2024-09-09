@@ -7,7 +7,7 @@ import ContactForm from '../../layouts/Contact/ContactForm'
 const Contact = () => {
   return (
     <>
-      <Gmaps />
+      {/* <Gmaps /> */}
         <div className="container">
           <ContactUs />
           <ContactForm />

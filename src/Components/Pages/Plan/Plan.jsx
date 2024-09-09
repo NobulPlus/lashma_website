@@ -51,7 +51,7 @@ const Plan = () => {
                   </div>
                 </div>
               </div>
-              <div className='p-6 bg-blue-100 rounded-lg shadow-md'>
+              {/* <div className='p-6 bg-blue-100 rounded-lg shadow-md'>
                 <div className='title'>
                   <h3 className='text-2xl font-bold text-blue-800'>Standard Plan (Individual)</h3>
                 </div>
@@ -71,8 +71,8 @@ const Plan = () => {
                     </a>
                   </div>
                 </div>
-              </div>
-              <div className='p-6 bg-green-100 rounded-lg shadow-md'>
+              </div> */}
+              {/* <div className='p-6 bg-green-100 rounded-lg shadow-md'>
                 <div className='title'>
                   <h3 className='text-2xl font-bold text-green-800'>Standard Plan (Family)</h3>
                 </div>
@@ -92,8 +92,8 @@ const Plan = () => {
                     </a>
                   </div>
                 </div>
-              </div>
-              <div className='p-6 bg-red-100 rounded-lg shadow-md'>
+              </div> */}
+              {/* <div className='p-6 bg-red-100 rounded-lg shadow-md'>
                 <div className='title'>
                   <h3 className='text-2xl font-bold text-red-800'>Standard Plus (Individual)</h3>
                 </div>
@@ -113,8 +113,8 @@ const Plan = () => {
                     </a>
                   </div>
                 </div>
-              </div>
-              <div className='p-6 bg-yellow-100 rounded-lg shadow-md'>
+              </div> */}
+              {/* <div className='p-6 bg-yellow-100 rounded-lg shadow-md'>
                 <div className='title'>
                   <h3 className='text-2xl font-bold text-yellow-800'>Standard Plus (Family)</h3>
                 </div>
@@ -134,7 +134,7 @@ const Plan = () => {
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className='p-6 bg-purple-100 rounded-lg shadow-md'>
                 <div className='title'>
                   <h3 className='text-2xl font-bold text-purple-800'>Senior Plan (Individual)</h3>
