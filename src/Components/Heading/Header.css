@@ -42,3 +42,54 @@ nav {
     color: var(--primary-color-variant);
     text-decoration: none;
   }
+  /* Header.css */
+
+  
+/* Marquee Section */
+.marquee-container {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.1rem; /* Slightly larger text */
+  font-weight: 500;
+  color: #ffffff;
+  background: linear-gradient(to right, #f28201, #e99d36); /* Vibrant gradient background */
+  border-top: 3px solid #e4783e; /* Subtle border for emphasis */
+  border-bottom: 3px solid #e4783e;
+  padding: 15px 0; /* Increased padding for better visibility */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for a floating effect */
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: scroll-left 30s linear infinite; /* Faster scrolling */
+}
+
+.contact-numbers {
+  font-weight: bold;
+  color: #4d4d4d; /* Highlighted numbers in gold */
+}
+
+/* Smooth scroll animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Pause animation on hover */
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .marquee-container {
+    font-size: 0.9rem; /* Slightly smaller text on mobile */
+    padding: 10px 0; /* Adjusted padding */
+  }
+}
+

@@ -25,7 +25,7 @@ const Home = () => {
     <>
     <Helmet>
       <title>LASHMA | Your good health, Our mandate</title>
-      <meta name='description' content='Lagos State Health Management Agency. ILERAEKO'/>
+      <meta name='description' content='Lagos State Health Management Agency. LASHMA'/>
       <link rel="canonical" href="/" />
     </Helmet>
       <Hero/>
@@ -39,7 +39,6 @@ const Home = () => {
       <Programs/>
       <Gap/>
       <Partner/>
-      <ModalComponent/>
     </>
   )
 }

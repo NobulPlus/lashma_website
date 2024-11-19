@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'text-primary': '#f28201',
+      },
       clipPath: {
         custom: 'polygon(10% 0, 100% 0, 100% 100%, 0 100%)',
       },

@@ -19,6 +19,8 @@ import Plan from './Components/Pages/Plan/Plan';
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 import ScrollTrigger from 'react-scroll-trigger';
 import ResourcePage from './Components/Pages/Resources/ResoucesPage';
+import ZohoChat from './Components/Chatbot/ZohoChat';
+// import ZohoChat from './Components/Chatbot/ZohoChat'; // Import ZohoChat component
 
 function App() {
   ReactGA.initialize('G-16Y7GXWY2D');
@@ -36,7 +38,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/youtube" element={<YoutubeVid />} />
-              <Route path="/card" element={<Card />} />  {/* Add route for Card */}
+              <Route path="/card" element={<Card />} />
               <Route path="/break" element={<Break />} />
               <Route path="/stat" element={<Stat />} />
               <Route path="/gmaps" element={<Gmaps />} />
@@ -48,9 +50,9 @@ function App() {
               <Route path='/about' element={<About />}/>
               <Route path='/plan' element={<Plan/>} />
               <Route path='/resources' element={<ResourcePage/>} />
-              {/* <Route path="/aboutus" element={<AboutUs />} /> */}
+              <Route path='/chatbot' element={<ZohoChat/>} />
             </Routes>
-          <Footer />
+          <Footer />{/* Add ZohoChat component here */}
       </Router>
     </>
   );
