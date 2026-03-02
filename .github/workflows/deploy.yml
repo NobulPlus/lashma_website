@@ -1,0 +1,38 @@
+name: 🚀 Deploy website on push
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  web-deploy:
+    name: 🎉 Build & Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🔨 Build project
+        run: npm run build
+
+      - name: 📂 Deploy to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.GIT_CPANEL_REACT_SERVER }}
+          username: ${{ secrets.GIT_CPANEL_REACT_USER }}
+          password: ${{ secrets.GIT_CPANEL_REACT_PWD }}
+          protocol: ftps
+          local-dir: dist/
+          server-dir: lashma.com/
