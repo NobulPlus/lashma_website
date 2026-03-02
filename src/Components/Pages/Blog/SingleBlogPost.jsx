@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import { getBlogById } from "../../../services/blogService";
 import { toast } from "react-toastify";
-import { truncateContent } from "../../../util";
+import { truncateContent } from "../../../utils/util";
 
 const SingleBlogPost = () => {
   const { id } = useParams();

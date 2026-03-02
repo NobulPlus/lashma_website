@@ -10,7 +10,7 @@ import {
   Button,
   Box,
 } from "@mui/material";
-import { truncateContent } from "../../../util";
+import { truncateContent } from "../../../utils/util";
 
 const BlogPreview = ({ blog }) => {
   const navigate = useNavigate();

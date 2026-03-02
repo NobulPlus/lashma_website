@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Header from '../Heading/Header';
-import Footer from '../Footeer/Footer';
+import Footer from '../Footer/Footer';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 import ScrollTrigger from 'react-scroll-trigger';
 // import PublicNoticeModal from '../PublicNotice/PublicNoticeModal';
