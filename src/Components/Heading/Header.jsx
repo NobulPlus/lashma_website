@@ -121,11 +121,11 @@ const Header = () => {
                   <li><Link to="/resources" onClick={closeMenu}>Resources</Link></li>
                   <li><Link to="/marketing-agents" onClick={closeMenu}>Marketing Agents</Link></li>
                   <li><Link to="https://verify.lshsportal.com:8283/" onClick={closeMenu}>LSHS Verification</Link></li>
+                  <li><Link to="/provider" onClick={closeMenu}>Healthcare Provider</Link></li>
                   <li><Link to="https://bit.ly/change-my-ileraeko-provider" onClick={closeMenu}>Change Hospital</Link></li>
                 </ul>
               </li>
 
-              <li><Link to="/provider" className="nav-link" onClick={closeMenu}>Healthcare Provider</Link></li>
               <li><Link to="/contact" className="nav-link" onClick={closeMenu}>Contact Us</Link></li>
             </ul>
 
