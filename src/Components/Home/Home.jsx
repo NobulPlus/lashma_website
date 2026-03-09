@@ -5,6 +5,7 @@ import ReactGA from 'react-ga4';
 import { Helmet } from 'react-helmet-async';
 // import Notice from '../Modal/ModalComponent';
 import CookieConsent from 'react-cookie-consent';
+import SurveyBanner from './SurveyBanner';
 
 // Lazy load components
 const YoutubeVid = lazy(() => import('../layouts/YoutubeVid/YoutubeVid'));
@@ -64,7 +65,7 @@ const Home = () => {
         }}
       >
         We value your privacy. We use cookies to enhance your browsing experience, analyze site traffic, personalize content,
-        and serve targeted advertisements. By clicking "Accept All Cookies" or continuing to use our website,
+        and serve targeted advertisements. By clicking &quot;Accept All Cookies&quot; or continuing to use our website,
         you consent to our use of cookies in accordance with our{' '}
         <Link to="/cookies-policy" style={{ color: '#F97316', textDecoration: 'underline' }}>
           Cookies Policy
@@ -74,6 +75,7 @@ const Home = () => {
       {/* Main Content */}
       {/* <Notice /> */}
       <Hero />
+      <SurveyBanner />
 
       <Suspense fallback={<div>Loading...</div>}>
         <YoutubeVid />
