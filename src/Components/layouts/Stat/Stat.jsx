@@ -4,21 +4,21 @@ import ScrollTrigger from 'react-scroll-trigger';
 
 const stats = [
   {
-    value: 1409992,
+    value: 1439324,
     suffix: '+',
     label: 'Lives Covered',
     icon: 'fa-solid fa-users',
     color: 'from-orange-500 to-amber-400',
   },
   {
-    value: 449,
+    value: 451,
     suffix: '+',
     label: 'Care Providers',
     icon: 'fa-solid fa-hospital',
     color: 'from-blue-500 to-cyan-400',
   },
   {
-    value: 78432,
+    value: 79825,
     suffix: '+',
     label: 'Maternal Cases',
     icon: 'fa-solid fa-heart-pulse',
@@ -44,8 +44,8 @@ const Stat = () => {
             <span className="section-label">Impact & Reach</span>
             <h2 className="section-heading">Our Numbers Speak</h2>
             <p className="section-subheading">
-              With over 449 healthcare providers and more than 1.4 million lives registered on the scheme
-              as of January 2026, and growing.
+              We have over 451 healthcare providers and more than 1.43 million lives registered on the scheme
+              as of the end of February 2026, with numbers continuing to grow.
             </p>
           </div>
 
