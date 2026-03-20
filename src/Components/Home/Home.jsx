@@ -9,13 +9,17 @@ import SurveyBanner from './SurveyBanner';
 
 // Lazy load components
 const YoutubeVid = lazy(() => import('../layouts/YoutubeVid/YoutubeVid'));
+const Testimonials = lazy(() => import('../layouts/Testimonials/Testimonials'));
 const About = lazy(() => import('../layouts/About/About'));
+const HowItWorks = lazy(() => import('../layouts/HowItWorks/HowItWorks'));
 const Card = lazy(() => import('../layouts/Card/Card'));
+const WhyLashma = lazy(() => import('../layouts/WhyLashma/WhyLashma'));
 const Break = lazy(() => import('../layouts/Break/Break'));
 const Stat = lazy(() => import('../layouts/Stat/Stat'));
 const Gmaps = lazy(() => import('../layouts/GMaps/Gmaps'));
 // const Telemedicine = lazy(() => import('../layouts/Telemedicine/Telemedicine'));
 const Programs = lazy(() => import('../layouts/Programs/Programs'));
+const CTABanner = lazy(() => import('../layouts/CTABanner/CTABanner'));
 const Gap = lazy(() => import('../layouts/Gap/Gap'));
 const Partner = lazy(() => import('../layouts/Partner/Partner'));
 const ZohoChat = lazy(() => import('../Chatbot/ZohoChat'));
@@ -78,18 +82,50 @@ const Home = () => {
       <SurveyBanner />
 
       <Suspense fallback={<div>Loading...</div>}>
+        {/* Social proof: video testimonials */}
         <YoutubeVid />
+
+        {/* Text-based beneficiary quotes (dark section) */}
+        <Testimonials />
+
+        {/* Who we are */}
         <About />
+
+        {/* How enrollment works (dark section) */}
+        <HowItWorks />
+
+        {/* Quick-action cards */}
         <Card />
+
+        {/* Why choose LASHMA - feature tiles */}
+        <WhyLashma />
+
+        {/* Enrollee quick-action bar */}
         <Break />
+
+        {/* Impact numbers */}
         <Stat />
+
+        {/* Provider map */}
         <Gmaps />
-        {/* <Telemedicine /> */}
+
+        {/* {<Telemedicine />} */}
+
+        {/* Our programs */}
         <Programs />
-        {/* <HomeBlogSection /> */}
+
+        {/* Final enrollment CTA (dark section) */}
+        <CTABanner />
+
+        {/* {<HomeBlogSection />} */}
+
+        {/* Media / radio spotlight */}
         <IleraEkoSpotlight />
-        {/* <Quality /> */}
+
+        {/* {<Quality />} */}
         <Gap />
+
+        {/* Partners marquee */}
         <Partner />
         <ZohoChat />
       </Suspense>
@@ -98,3 +134,4 @@ const Home = () => {
 };
 
 export default Home;
+

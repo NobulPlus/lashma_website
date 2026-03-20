@@ -1,5 +1,6 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
+import { motion } from 'framer-motion';
 import img1 from '../../../assets/All/import/Partner/bono.png';
 import img2 from '../../../assets/All/import/Partner/arfh.png';
 import img3 from '../../../assets/All/import/Partner/6334.png';
@@ -19,40 +20,87 @@ import img16 from '../../../assets/All/import/Partner/unicef.png';
 import img17 from '../../../assets/All/import/Partner/USAID.png';
 import img18 from '../../../assets/All/import/Partner/wema.png';
 
-const partners = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18];
+const rowA = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
+const rowB = [img10, img11, img12, img13, img14, img15, img16, img17, img18];
+
+const LogoCard = ({ img, index }) => (
+  <div
+    className="mx-6 flex items-center justify-center bg-white rounded-xl border border-gray-100 shadow-soft px-6 py-4 hover:shadow-card hover:border-orange-100 transition-all duration-300 group"
+    style={{ minWidth: '140px', height: '80px' }}
+  >
+    <img
+      src={img}
+      alt={`Partner ${index + 1}`}
+      className="h-10 w-auto object-contain opacity-60 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all duration-300"
+    />
+  </div>
+);
+
+const trustStats = [
+  { value: '18+', label: 'Strategic Partners', icon: '🤝' },
+  { value: 'Global', label: 'International Funding Bodies', icon: '🌍' },
+  { value: '10+', label: 'Financial Institutions', icon: '🏦' },
+];
 
 const Partner = () => {
   return (
-    <section className="bg-white border-t border-gray-100">
-      <div className="section-container">
+    <section className="relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #f8f9fc 0%, #fff 100%)' }}>
+      {/* Top accent line */}
+      <div className="h-0.5 w-full" style={{ background: 'linear-gradient(to right, #f28201, #8b5cf6, #06b6d4)' }} />
+
+      <div className="section-container pb-0">
         {/* Header */}
-        <div className="text-center mb-10">
-          <span className="section-label">Trusted By</span>
-          <h2 className="section-heading">Our Partners</h2>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#f28201', background: 'rgba(242,130,1,0.1)' }}>
+            Our Ecosystem
+          </span>
+          <h2 className="section-heading">Partners &amp; Stakeholders</h2>
+          <p className="section-subheading">
+            We collaborate with global health organisations, financial institutions, and civil society bodies to deliver world-class healthcare to every Lagos resident.
+          </p>
+        </motion.div>
+      </div>
 
-        {/* Marquee */}
-        <div className="relative">
-          {/* Fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+      {/* Dual marquee rows */}
+      <div className="relative py-2 space-y-4">
+        {/* Fade edges */}
+        <div className="absolute left-0 top-0 bottom-0 w-28 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, #f8f9fc, transparent)' }} />
+        <div className="absolute right-0 top-0 bottom-0 w-28 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, #f8f9fc, transparent)' }} />
 
-          <Marquee pauseOnHover speed={40} gradient={false}>
-            {partners.map((img, index) => (
-              <div
-                key={index}
-                className="mx-8 flex items-center justify-center"
-                style={{ minWidth: '120px' }}
-              >
-                <img
-                  src={img}
-                  alt={`Partner ${index + 1}`}
-                  className="h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
-                />
-              </div>
-            ))}
-          </Marquee>
-        </div>
+        {/* Row 1 — left to right */}
+        <Marquee pauseOnHover speed={35} gradient={false} direction="left">
+          {rowA.map((img, i) => <LogoCard key={i} img={img} index={i} />)}
+        </Marquee>
+
+        {/* Row 2 — right to left */}
+        <Marquee pauseOnHover speed={30} gradient={false} direction="right">
+          {rowB.map((img, i) => <LogoCard key={i} img={img} index={i + 9} />)}
+        </Marquee>
+      </div>
+
+      {/* Trust statistics strip */}
+      <div className="section-container pt-10">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto"
+        >
+          {trustStats.map((stat, i) => (
+            <div key={i} className="flex flex-col items-center text-center p-6 rounded-2xl bg-white border border-gray-100 shadow-soft">
+              <span className="text-3xl mb-2">{stat.icon}</span>
+              <span className="text-2xl font-extrabold text-gray-900 font-heading">{stat.value}</span>
+              <span className="text-xs text-gray-500 font-medium mt-1 uppercase tracking-wider">{stat.label}</span>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
