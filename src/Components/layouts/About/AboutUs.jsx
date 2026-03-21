@@ -24,7 +24,7 @@ const leadership = {
 // ─── Key Management Roles ────────────────────────────────────────────────────
 const managementRoles = [
   {
-    name: 'Mr. [Name Placeholder]',
+    name: 'Sefiu Oladejo',
     acronym: 'HICT',
     role: 'Head, Information & Communication Technology',
     dept: 'ICT Division',
@@ -34,7 +34,7 @@ const managementRoles = [
     badge: 'HICT',
   },
   {
-    name: 'Mrs. [Name Placeholder]',
+    name: 'Aramide Ojo',
     acronym: 'HOF',
     role: 'Head of Finance',
     dept: 'Finance & Accounts Division',
@@ -44,7 +44,7 @@ const managementRoles = [
     badge: 'HOF',
   },
   {
-    name: 'Mr. [Name Placeholder]',
+    name: 'Rotimi Olatunji',
     acronym: 'HBD',
     role: 'Head of Business Development',
     dept: 'Business Development & Partnerships',
@@ -54,7 +54,7 @@ const managementRoles = [
     badge: 'HBD',
   },
   {
-    name: 'Mrs. [Name Placeholder]',
+    name: 'Micheal Green',
     acronym: 'HCS',
     role: 'Head, Customer Service',
     dept: 'Beneficiary Services Division',
@@ -64,8 +64,8 @@ const managementRoles = [
     badge: 'HCS',
   },
   {
-    name: 'Mrs. [Name Placeholder]',
-    acronym: 'IEM',
+    name: 'Dr. Fadipe',
+    acronym: 'ILM',
     role: 'Head, Ilera Eko Manager',
     dept: 'ILERA EKO Programme Office',
     bio: 'Coordinates all operational activities under the ILERA EKO health scheme, ensuring seamless enrollment, provider engagement, and benefit delivery. Serves as the primary operational interface between enrollees, healthcare providers, and the Agency.',
