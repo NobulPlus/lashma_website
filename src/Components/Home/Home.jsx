@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense, lazy } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Hero from './Hero/Hero';
 import ReactGA from 'react-ga4';
@@ -7,24 +7,25 @@ import { Helmet } from 'react-helmet-async';
 import CookieConsent from 'react-cookie-consent';
 import SurveyBanner from './SurveyBanner';
 
-// Lazy load components
-const YoutubeVid = lazy(() => import('../layouts/YoutubeVid/YoutubeVid'));
-const Testimonials = lazy(() => import('../layouts/Testimonials/Testimonials'));
-const About = lazy(() => import('../layouts/About/About'));
-const HowItWorks = lazy(() => import('../layouts/HowItWorks/HowItWorks'));
-const Card = lazy(() => import('../layouts/Card/Card'));
-const WhyLashma = lazy(() => import('../layouts/WhyLashma/WhyLashma'));
-const Break = lazy(() => import('../layouts/Break/Break'));
-const Stat = lazy(() => import('../layouts/Stat/Stat'));
-const Gmaps = lazy(() => import('../layouts/GMaps/Gmaps'));
-// const Telemedicine = lazy(() => import('../layouts/Telemedicine/Telemedicine'));
-const Programs = lazy(() => import('../layouts/Programs/Programs'));
-const CTABanner = lazy(() => import('../layouts/CTABanner/CTABanner'));
-const Gap = lazy(() => import('../layouts/Gap/Gap'));
-const Partner = lazy(() => import('../layouts/Partner/Partner'));
-const ZohoChat = lazy(() => import('../Chatbot/ZohoChat'));
-const HomeBlogSection = lazy(() => import('../layouts/Blog/HomeBlogSection'));
-const IleraEkoSpotlight = lazy(() => import('../layouts/EkoSpotLight/IleraEkoSpotLight'));
+// Normal imports
+import YoutubeVid from '../layouts/YoutubeVid/YoutubeVid';
+import Testimonials from '../layouts/Testimonials/Testimonials';
+import About from '../layouts/About/About';
+import HowItWorks from '../layouts/HowItWorks/HowItWorks';
+import Card from '../layouts/Card/Card';
+import WhyLashma from '../layouts/WhyLashma/WhyLashma';
+import Break from '../layouts/Break/Break';
+import Stat from '../layouts/Stat/Stat';
+import Gmaps from '../layouts/GMaps/Gmaps';
+// import Telemedicine from '../layouts/Telemedicine/Telemedicine';
+import Programs from '../layouts/Programs/Programs';
+import CTABanner from '../layouts/CTABanner/CTABanner';
+import Gap from '../layouts/Gap/Gap';
+import Partner from '../layouts/Partner/Partner';
+import ZohoChat from '../Chatbot/ZohoChat';
+import HomeBlogSection from '../layouts/Blog/HomeBlogSection';
+import IleraEkoSpotlight from '../layouts/EkoSpotLight/IleraEkoSpotLight';
+// import SocialUpdates from '../layouts/SocialUpdates/SocialUpdates';
 
 const Home = () => {
   useEffect(() => {
@@ -81,7 +82,7 @@ const Home = () => {
       <Hero />
       <SurveyBanner />
 
-      <Suspense fallback={<div>Loading...</div>}>
+      
         {/* Social proof: video testimonials */}
         <YoutubeVid />
 
@@ -117,6 +118,9 @@ const Home = () => {
         {/* Final enrollment CTA (dark section) */}
         <CTABanner />
 
+        {/* Featured social posts */}
+        {/* <SocialUpdates /> */}
+
         {/* {<HomeBlogSection />} */}
 
         {/* Media / radio spotlight */}
@@ -128,10 +132,8 @@ const Home = () => {
         {/* Partners marquee */}
         <Partner />
         <ZohoChat />
-      </Suspense>
     </>
   );
 };
 
 export default Home;
-

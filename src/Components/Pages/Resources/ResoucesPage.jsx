@@ -1,19 +1,9 @@
 import React from 'react';
-import cp from '../../../assets/doc/CP.pdf'
-import provider from '../../../assets/doc/provider.pdf'
-import ekosha from '../../../assets/doc/ekosha.pdf'
+import ekosha from '../../../assets/doc/ekosha.pdf';
 
-import EKSbulletinQ3 from '../../../assets/doc/EKOSHANewsBulletinQ32024 - converted.pdf'
+import EKSbulletinQ3 from '../../../assets/doc/EKOSHANewsBulletinQ32024 - converted.pdf';
 
 const resources = [
-  {
-    title: 'Community Pharmacies',
-    fileUrl: cp,
-  },
-  {
-    title: 'ILERA EKO Provider',
-    fileUrl: provider,
-  },
   {
     title: 'EKOSHA Provider',
     fileUrl: ekosha,
