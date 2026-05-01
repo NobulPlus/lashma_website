@@ -5,10 +5,8 @@ import AboutMgt from '../../layouts/About/AboutMgt'
 const Aboutus = () => {
   return (
     <>
-      <div className="container">
-        <About/>
-        {/* <AboutMgt/> */}
-      </div>
+      <About/>
+      {/* <AboutMgt/> */}
     </>
   )
 }

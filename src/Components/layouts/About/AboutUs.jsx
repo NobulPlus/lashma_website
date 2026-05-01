@@ -3,85 +3,72 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 
 // ─── Images ───────────────────────────────────────────────────────────────────
-import psPhoto from '../../../assets/images/65.png';
-import mgtPhoto1 from '../../../assets/All/Mgt/Potrait.png';
-import mgtPhoto2 from '../../../assets/All/Mgt/IMG2.png';
-import mgtPhoto3 from '../../../assets/All/Mgt/img9.png';
-import mgtMale1 from '../../../assets/All/Mgt/male1.png';
-import mgtFemale1 from '../../../assets/All/Mgt/female1.png';
-import mgtMale2 from '../../../assets/All/Mgt/male2.png';
+const genericAvatar = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='100%25' height='100%25'%3E%3Crect width='24' height='24' fill='%23cbd5e1'/%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z' fill='%23f8fafc'/%3E%3C/svg%3E";
 
 // ─── Leadership / PS ──────────────────────────────────────────────────────────
 const leadership = {
-  name: 'Dr. Emmanuella Zamba',
+  name: 'Dr. Emmanualla Zamba',
   role: 'Permanent Secretary',
-  dept: 'Lagos State Health Management Agency',
-  bio: 'Dr. Emmanuella Zamba provides strategic oversight for LASHMA, championing universal health coverage for all Lagos State residents through innovation, policy reform, and institutional excellence. Under her leadership, the Agency has significantly expanded enrollment and provider coverage across Lagos State.',
-  photo: psPhoto,
+  bio: 'Dr. Emmanualla Zamba provides strategic oversight for LASHMA, championing universal health coverage for all Lagos State residents through innovation, policy reform, and institutional excellence. Under her leadership, the Agency has significantly expanded enrollment and provider coverage across Lagos State.',
+  photo: genericAvatar,
   accent: 'from-orange-500 to-amber-500',
 };
 
 // ─── Key Management Roles ────────────────────────────────────────────────────
 const managementRoles = [
   {
-    name: 'Sefiu Oladejo',
-    acronym: 'HICT',
-    role: 'Head, Information & Communication Technology',
-    dept: 'ICT Division',
-    bio: 'Responsible for the strategic direction and management of all ICT systems and digital infrastructure at LASHMA, including the ILERA EKO digital enrollment platform, telemedicine integration, and data security.',
-    photo: mgtMale1,
-    accent: 'from-violet-500 to-indigo-600',
-    badge: 'HICT',
-  },
-  {
     name: 'Aramide Ojo',
     acronym: 'HOF',
-    role: 'Head of Finance',
-    dept: 'Finance & Accounts Division',
+    role: 'Head, Finance',
     bio: 'Oversees all financial planning, budgeting, claims processing, and financial reporting for LASHMA. Ensures fiscal responsibility and compliance with Lagos State Government financial regulations and public sector accounting standards.',
-    photo: mgtPhoto3,
+    photo: genericAvatar,
     accent: 'from-emerald-500 to-teal-600',
     badge: 'HOF',
   },
   {
-    name: 'Rotimi Olatunji',
+    name: 'Olatunji Rotimi',
     acronym: 'HBD',
-    role: 'Head of Business Development',
-    dept: 'Business Development & Partnerships',
+    role: 'Head, Business Development',
     bio: 'Drives LASHMA\'s growth strategy through strategic partnerships, corporate enrollment campaigns, and revenue diversification. Leads negotiations with employers, HMOs, and institutional partners to expand the ILERA EKO scheme.',
-    photo: mgtMale2,
+    photo: genericAvatar,
     accent: 'from-cyan-500 to-sky-600',
     badge: 'HBD',
   },
   {
+    name: 'Oladejo Sefiu',
+    acronym: 'HICT',
+    role: 'Head, Information and Communication Technology',
+    bio: 'Responsible for the strategic direction and management of all ICT systems and digital infrastructure at LASHMA, including the ILERA EKO digital enrollment platform, telemedicine integration, and data security.',
+    photo: genericAvatar,
+    accent: 'from-violet-500 to-indigo-600',
+    badge: 'HICT',
+  },
+  {
+    name: 'Tawa Oshinowo',
+    acronym: 'ETL',
+    role: 'Team Lead, EKOSHA',
+    bio: 'Coordinates the operations and strategic initiatives of the EKOSHA programme, ensuring effective stakeholder engagement and program delivery.',
+    photo: genericAvatar,
+    accent: 'from-rose-500 to-pink-600',
+    badge: 'EKOSHA',
+  },
+  {
+    name: 'Tayo-Adetoro Adetoro',
+    acronym: 'HPME',
+    role: 'Head, Planning Monitoring & Evaluation',
+    bio: 'Leads the evaluation of LASHMA\'s programs and policies, ensuring data-driven decision making and continuous improvement in service delivery across all healthcare initiatives.',
+    photo: genericAvatar,
+    accent: 'from-amber-500 to-orange-500',
+    badge: 'PME',
+  },
+  {
     name: 'Micheal Green',
     acronym: 'HCS',
-    role: 'Head, Customer Service',
-    dept: 'Beneficiary Services Division',
+    role: 'Head, Client Service',
     bio: 'Leads the beneficiary experience team, overseeing the customer service helplines, walk-in service centres, and digital support channels. Champions a culture of empathy and responsiveness across all touchpoints.',
-    photo: mgtPhoto1,
-    accent: 'from-rose-500 to-pink-600',
-    badge: 'HCS',
-  },
-  {
-    name: 'Dr. Fadipe',
-    acronym: 'ILM',
-    role: 'Head, Ilera Eko Manager',
-    dept: 'ILERA EKO Programme Office',
-    bio: 'Coordinates all operational activities under the ILERA EKO health scheme, ensuring seamless enrollment, provider engagement, and benefit delivery. Serves as the primary operational interface between enrollees, healthcare providers, and the Agency.',
-    photo: mgtPhoto2,
-    accent: 'from-amber-500 to-orange-500',
-    badge: 'IEM',
-  },
-  {
-    name: 'Mr. [Name Placeholder]',
-    acronym: 'HOL',
-    role: 'Head of Legal',
-    dept: 'Legal & Compliance Division',
-    bio: 'Manages all legal matters, contracts, regulatory compliance, and dispute resolution for LASHMA. Provides legal advisory services to executive management and ensures the Agency\'s operations conform to all applicable laws and regulations.',
-    photo: mgtFemale1,
+    photo: genericAvatar,
     accent: 'from-blue-500 to-indigo-600',
-    badge: 'HOL',
+    badge: 'HCS',
   },
 ];
 
@@ -131,7 +118,6 @@ const MgtCard = ({ person, index }) => (
       <div className={`h-0.5 w-10 rounded-full bg-gradient-to-r ${person.accent} mb-4`} />
       <h3 className="font-bold text-gray-900 font-heading text-base mb-0.5">{person.name}</h3>
       <p className={`text-xs font-bold mb-0.5 bg-gradient-to-r ${person.accent} bg-clip-text`} style={{ WebkitTextFillColor: 'transparent' }}>{person.role}</p>
-      <p className="text-gray-400 text-xs mb-3 uppercase tracking-wider">{person.dept}</p>
       <p className="text-gray-500 text-sm leading-relaxed flex-1">{person.bio}</p>
     </div>
   </motion.div>
@@ -233,8 +219,7 @@ const AboutUs = () => {
               {/* Orange accent bar */}
               <div className="h-1 w-14 rounded-full mb-5" style={{ background: 'linear-gradient(to right, #f28201, #f59e0b)' }} />
               <h3 className="text-2xl font-extrabold text-gray-900 font-heading mb-1">{leadership.name}</h3>
-              <p className="text-orange-500 font-bold text-sm mb-1">{leadership.role}</p>
-              <p className="text-gray-400 text-xs mb-5 uppercase tracking-wider">{leadership.dept}</p>
+              <p className="text-orange-500 font-bold text-sm mb-5">{leadership.role}</p>
               <p className="text-gray-600 text-base leading-relaxed">{leadership.bio}</p>
             </div>
           </motion.div>

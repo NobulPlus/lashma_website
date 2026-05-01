@@ -88,16 +88,22 @@ const Header = () => {
                 onMouseEnter={handleArmsEnter}
                 onMouseLeave={handleArmsLeave}
               >
-                <button className="nav-link nav-dropdown-trigger">
+                <button 
+                  className="nav-link nav-dropdown-trigger"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setArmsDropdownOpen(!armsDropdownOpen);
+                  }}
+                >
                   Our Arms
                   <svg className={`dropdown-chevron ${armsDropdownOpen ? 'chevron-open' : ''}`} width="12" height="12" viewBox="0 0 12 12" fill="none">
                     <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </button>
                 <ul className={`dropdown-menu ${armsDropdownOpen ? 'dropdown-open' : ''}`}>
-                  <li><Link to="/maintenance" onClick={closeMenu}>ILERA EKO</Link></li>
-                  <li><Link to="/maintenance" onClick={closeMenu}>LSHS Regulation</Link></li>
-                  <li><Link to="https://lashma.com/ekosha" onClick={closeMenu}>EKOSHA</Link></li>
+                  <li><a href="https://www.ileraeko.com" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>ILERA EKO</a></li>
+                  <li><Link to="/coming-soon" onClick={closeMenu}>LSHS Regulation</Link></li>
+                  <li><a href="https://lashma.com/ekosha" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>EKOSHA</a></li>
                 </ul>
               </li>
 
@@ -109,7 +115,13 @@ const Header = () => {
                 onMouseEnter={handleNetworkEnter}
                 onMouseLeave={handleNetworkLeave}
               >
-                <button className="nav-link nav-dropdown-trigger">
+                <button 
+                  className="nav-link nav-dropdown-trigger"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setNetworkDropdownOpen(!networkDropdownOpen);
+                  }}
+                >
                   Our Network
                   <svg className={`dropdown-chevron ${networkDropdownOpen ? 'chevron-open' : ''}`} width="12" height="12" viewBox="0 0 12 12" fill="none">
                     <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
