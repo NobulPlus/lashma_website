@@ -18,7 +18,7 @@ jobs:
       - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
           cache: 'npm'
 
       - name: 📦 Install dependencies
@@ -30,9 +30,14 @@ jobs:
       - name: 📂 Deploy to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.GIT_CPANEL_REACT_SERVER }}
-          username: ${{ secrets.GIT_CPANEL_REACT_USER }}
-          password: ${{ secrets.GIT_CPANEL_REACT_PWD }}
-          protocol: ftp
-          local-dir: dist/
-          server-dir: /lashma.com/
+          server: ftp.lashma.com
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftps
+          local-dir: ./dist/
+          server-dir: public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
