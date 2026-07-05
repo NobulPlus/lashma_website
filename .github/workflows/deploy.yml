@@ -30,7 +30,7 @@ jobs:
       - name: 📂 Deploy to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: 92.205.94.58
+          server: 192.64.117.70
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
