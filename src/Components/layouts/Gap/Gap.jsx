@@ -25,7 +25,7 @@ const Gap = () => {
           {/* Right */}
           <div className="flex-1 text-center md:text-left">
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-              We leverage technology to redefine quality healthcare — making it simple, affordable, flexible and holistic for every Lagos resident.
+              We leverage technology to redefine quality healthcare, making it simple, affordable, and holistic for every Lagos resident.
             </p>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
               <Link

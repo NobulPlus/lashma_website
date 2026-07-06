@@ -19,7 +19,7 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
       </svg>
     ),
-    title: '451+ Care Providers',
+    title: '634+ Care Providers',
     description: 'A sprawling network of accredited hospitals, clinics, and specialists spread across all Lagos districts.',
     gradient: 'from-cyan-500 to-sky-600',
     glow: 'rgba(6,182,212,0.15)',
@@ -31,7 +31,7 @@ const features = [
       </svg>
     ),
     title: 'Full Maternity Cover',
-    description: 'Comprehensive antenatal, delivery, and postnatal care — over 79,000 maternal cases handled and counting.',
+    description: 'Comprehensive antenatal, delivery, and postnatal care, with over 87,000 maternal cases handled and counting.',
     gradient: 'from-rose-500 to-pink-600',
     glow: 'rgba(244,63,94,0.15)',
   },
@@ -42,7 +42,7 @@ const features = [
       </svg>
     ),
     title: 'Telemedicine Services',
-    description: 'See a licensed doctor from anywhere in Lagos via video or phone — prescriptions and referrals included.',
+    description: 'See a licensed doctor from anywhere in Lagos via video or phone. Prescriptions and referrals included.',
     gradient: 'from-emerald-500 to-teal-600',
     glow: 'rgba(16,185,129,0.15)',
   },
@@ -64,7 +64,7 @@ const features = [
       </svg>
     ),
     title: 'Government-Backed Security',
-    description: 'LASHMA is a Lagos State government agency — your premium and your health are in safe, regulated hands.',
+    description: 'LASHMA is a Lagos State government agency. Your premium and your health are in safe, regulated hands.',
     gradient: 'from-indigo-500 to-blue-600',
     glow: 'rgba(99,102,241,0.15)',
   },
@@ -99,7 +99,7 @@ const WhyLashma = () => {
           </span>
           <h2 className="section-heading">Built for Every Lagos Resident</h2>
           <p className="section-subheading">
-            From free drugs to telemedicine, our scheme is designed around what you actually need — affordable, accessible, quality healthcare.
+            From covered medications to telemedicine, our scheme is designed around what you actually need: affordable, accessible, quality healthcare.
           </p>
         </motion.div>
 

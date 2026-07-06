@@ -72,7 +72,7 @@ const Testimonials = () => {
             Real People, Real Relief
           </h2>
           <p className="text-slate-400 text-base max-w-xl mx-auto leading-relaxed">
-            Over 1.4 million Lagos residents have experienced the difference LASHMA makes. Here are a few of their stories.
+            Over 1.5 million Lagos residents have experienced the difference LASHMA makes. Here are a few of their stories.
           </p>
         </motion.div>
 

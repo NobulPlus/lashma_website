@@ -122,7 +122,7 @@ const ContactUs = () => {
             </span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="text-slate-400 text-lg leading-relaxed max-w-xl mx-auto">
-            Whether you have questions about enrollment, our health plans, or need support — our team is ready to assist you.
+            Whether you have questions about enrollment, our health plans, or need support, our team is ready to assist you.
           </motion.p>
         </div>
 

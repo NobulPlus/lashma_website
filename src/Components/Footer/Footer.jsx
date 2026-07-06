@@ -105,7 +105,7 @@ const Footer = () => {
               <span className="text-white font-extrabold text-lg font-heading tracking-tight">LASHMA</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
-              Lagos State Health Management Agency — connecting over 1.4 million Lagos residents to quality, affordable healthcare through the ILERA EKO scheme.
+              Lagos State Health Management Agency, connecting over 1.5 million Lagos residents to quality, affordable healthcare through the ILERA EKO scheme.
             </p>
 
             {/* Social icons */}

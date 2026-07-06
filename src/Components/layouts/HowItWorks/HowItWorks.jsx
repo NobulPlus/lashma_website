@@ -24,7 +24,7 @@ const steps = [
       </svg>
     ),
     title: 'Choose a Plan',
-    description: 'Browse flexible health plans crafted for every budget — from individuals to large corporate groups.',
+    description: 'Browse health plans crafted for every budget, from individuals to large corporate groups.',
     color: 'from-cyan-500 to-sky-600',
     lightBg: 'bg-cyan-50',
     border: 'border-cyan-100',
@@ -37,7 +37,7 @@ const steps = [
       </svg>
     ),
     title: 'Pick a Hospital',
-    description: 'Select from 451+ accredited care providers across Lagos State — GPs, specialists & hospitals near you.',
+    description: 'Select from 634+ accredited care providers across Lagos State: GPs, specialists and hospitals near you.',
     color: 'from-emerald-500 to-teal-600',
     lightBg: 'bg-emerald-50',
     border: 'border-emerald-100',
@@ -50,7 +50,7 @@ const steps = [
       </svg>
     ),
     title: 'Access Quality Care',
-    description: 'Walk into any ILERA EKO provider and receive world-class healthcare — no huge bills, no stress.',
+    description: 'Walk into any ILERA EKO provider and receive world-class healthcare, with no huge bills and no stress.',
     color: 'from-rose-500 to-pink-600',
     lightBg: 'bg-rose-50',
     border: 'border-rose-100',
@@ -100,7 +100,7 @@ const HowItWorks = () => {
             How It Works
           </h2>
           <p className="text-slate-400 text-base max-w-xl mx-auto leading-relaxed">
-            Getting covered with ILERA EKO is simple and fast. Follow these four steps and start accessing quality healthcare today.
+            Getting covered with ILERA EKO is simple and fast. Follow these four steps and start accessing quality healthcare.
           </p>
         </motion.div>
 

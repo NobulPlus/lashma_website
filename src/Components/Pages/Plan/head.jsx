@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 const trustPills = [
   { icon: '🏛️', text: 'Government Regulated' },
   { icon: '✅', text: 'No Hidden Fees' },
-  { icon: '⚡', text: 'Instant Coverage' },
+  { icon: '⚡', text: 'Monthly Access' },
 ];
 
 const stats = [
-  { value: '1.4M+', label: 'Lives Covered' },
-  { value: '451+', label: 'Care Providers' },
-  { value: '4', label: 'Flexible Plans' },
+  { value: '1.5M+', label: 'Lives Covered' },
+  { value: '634+', label: 'Care Providers' },
+  { value: '4', label: 'Available Plans' },
 ];
 
 const Head = () => {
@@ -78,7 +78,7 @@ const Head = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto mb-8"
         >
-          Cost-effective, flexible healthcare plans designed for every Lagos resident — individuals, families, seniors, and the diaspora. Choose a plan and start accessing quality care today.
+          Cost-effective healthcare plans designed for every Lagos resident: individuals, families, seniors, and the diaspora. Choose a plan and start accessing quality care.
         </motion.p>
 
         {/* Trust pills */}
