@@ -102,12 +102,13 @@ const Header = () => {
                 </button>
                 <ul className={`dropdown-menu ${armsDropdownOpen ? 'dropdown-open' : ''}`}>
                   <li><a href="https://www.ileraeko.com" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>ILERA EKO</a></li>
-                  <li><Link to="/coming-soon" onClick={closeMenu}>LSHS Regulation</Link></li>
+                  <li><Link to="/maintenance" onClick={closeMenu}>LSHS Regulation</Link></li>
                   <li><a href="https://lashma.com/ekosha" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>EKOSHA</a></li>
                 </ul>
               </li>
 
               <li><Link to="/about" className="nav-link" onClick={closeMenu}>Our Team</Link></li>
+              <li><Link to="/blog" className="nav-link" onClick={closeMenu}>Blog</Link></li>
 
               {/* Our Network Dropdown */}
               <li
@@ -128,13 +129,13 @@ const Header = () => {
                   </svg>
                 </button>
                 <ul className={`dropdown-menu ${networkDropdownOpen ? 'dropdown-open' : ''}`}>
-                  <li><Link to="https://lagosstate.gov.ng/" onClick={closeMenu}>Lagos State</Link></li>
-                  <li><Link to="https://ileraekospotlight.com/" onClick={closeMenu}>Ilera Eko SpotLight</Link></li>
+                  <li><a href="https://lagosstate.gov.ng/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Lagos State</a></li>
+                  <li><a href="https://ileraekospotlight.com/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Ilera Eko SpotLight</a></li>
                   <li><Link to="/resources" onClick={closeMenu}>Resources</Link></li>
                   <li><Link to="/marketing-agents" onClick={closeMenu}>Marketing Agents</Link></li>
-                  <li><Link to="https://verify.lshsportal.com:8283/" onClick={closeMenu}>LSHS Verification</Link></li>
+                  <li><a href="https://verify.lshsportal.com:8283/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>LSHS Verification</a></li>
                   <li><Link to="/provider" onClick={closeMenu}>Healthcare Provider</Link></li>
-                  <li><Link to="https://bit.ly/change-my-ileraeko-provider" onClick={closeMenu}>Change Hospital</Link></li>
+                  <li><a href="https://bit.ly/change-my-ileraeko-provider" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Change Hospital</a></li>
                 </ul>
               </li>
 
@@ -143,23 +144,23 @@ const Header = () => {
 
             {/* Mobile CTA Buttons */}
             <div className="nav-cta-mobile">
-              <Link to="https://lashma.myclinify.com/register" className="cta-btn cta-primary" onClick={closeMenu}>
+              <a href="https://lashma.myclinify.com/register" className="cta-btn cta-primary" onClick={closeMenu} target="_blank" rel="noopener noreferrer">
                 Enroll ILERA EKO
-              </Link>
-              <Link to="https://lashma.myclinify.com/paypolicy" className="cta-btn cta-dark" onClick={closeMenu}>
+              </a>
+              <a href="https://lashma.myclinify.com/paypolicy" className="cta-btn cta-dark" onClick={closeMenu} target="_blank" rel="noopener noreferrer">
                 Pay Now
-              </Link>
+              </a>
             </div>
           </nav>
 
           {/* Desktop CTA + Hamburger */}
           <div className="header-actions">
-            <Link to="https://lashma.myclinify.com/register" className="cta-btn cta-primary">
+            <a href="https://lashma.myclinify.com/register" className="cta-btn cta-primary" target="_blank" rel="noopener noreferrer">
               Enroll ILERA EKO
-            </Link>
-            <Link to="https://lashma.myclinify.com/paypolicy" className="cta-btn cta-dark">
+            </a>
+            <a href="https://lashma.myclinify.com/paypolicy" className="cta-btn cta-dark" target="_blank" rel="noopener noreferrer">
               Pay Now
-            </Link>
+            </a>
 
             {/* Hamburger */}
             <button

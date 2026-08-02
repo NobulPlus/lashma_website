@@ -367,7 +367,7 @@ const Plan = () => {
       <PlanComparison />
 
       {/* FAQ */}
-      <section className="bg-gray-50">
+      <section id="faq" className="bg-gray-50">
         <div className="section-container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -32,7 +32,7 @@ const data = [
     title: 'Quality Regulation',
     icon: 'fa-solid fa-hospital-user',
     description: 'Ensuring quality health service through effective regulation and expanding access to licensed HMO care.',
-    link: '/coming-soon',
+    link: '/maintenance',
     color: 'from-purple-500 to-indigo-400',
   },
 ];

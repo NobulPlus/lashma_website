@@ -53,63 +53,76 @@ const MarketingAgent = () => {
     const getPageCount = (data) => Math.ceil(data.length / rowsPerPage);
   
     return (
-      <div className="container py-10 pt-56 mx-auto">
-        <h2 className="mb-6 text-2xl font-semibold text-center">Marketing Agents</h2>
-  
-        {/* Table 1 Section */}
-        <div className="mb-6">
-          <div
-            className="flex items-center justify-between p-4 bg-gray-100 rounded shadow cursor-pointer"
-            onClick={() => toggleTable('table1')}
-          >
-            <h3 className="text-lg font-medium">Marketing Agents</h3>
-            <span
-              className={`text-orange-500 transform transition-transform ${visibleTable === 'table1' ? 'rotate-90' : ''}`}
-            >
-              <i class="fa-solid fa-arrow-right-long"></i>
-            </span>
+      <div className="bg-[#f8f9fc] min-h-screen">
+        <div className="section-container pt-36 pb-20">
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <span className="section-label">Our Network</span>
+            <h1 className="section-heading">Marketing Agents</h1>
+            <p className="section-subheading">
+              Find authorised LASHMA marketing agents and their contact numbers.
+            </p>
           </div>
-          {visibleTable === 'table1' && (
-            <div className="p-4 mt-4 bg-white rounded shadow">
-              <table className="w-full border border-collapse border-gray-200 table-auto">
-                <thead>
-                  <tr>
-                    <th className="p-2 border border-gray-300">MARKETING AGENTS</th>
-                    <th className="p-2 border border-gray-300">PHONE NUMBER</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {getPaginatedData(table1Data, 'table1').map((row, idx) => (
-                    <tr key={idx}>
-                      {row.map((cell, index) => (
-                        <td key={index} className="p-2 border border-gray-300">{cell}</td>
+
+          <div className="mb-5">
+            <button
+              type="button"
+              className="w-full flex items-center justify-between p-4 bg-white rounded-xl border border-gray-100 cursor-pointer text-left"
+              onClick={() => toggleTable('table1')}
+              aria-expanded={visibleTable === 'table1'}
+            >
+              <h2 className="text-base sm:text-lg font-bold text-[#1a1a2e] font-heading m-0">Agent Directory</h2>
+              <span
+                className={`text-[#f28201] transform transition-transform ${visibleTable === 'table1' ? 'rotate-90' : ''}`}
+              >
+                <i className="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+              </span>
+            </button>
+            {visibleTable === 'table1' && (
+              <div className="p-4 sm:p-5 mt-3 bg-white rounded-xl border border-gray-100">
+                <div className="overflow-x-auto rounded-lg border border-gray-100">
+                  <table className="w-full border-collapse table-auto text-sm">
+                    <thead>
+                      <tr className="bg-[#f8f9fc]">
+                        <th className="p-3 text-left font-semibold text-[#1a1a2e] border-b border-gray-100">Marketing Agent</th>
+                        <th className="p-3 text-left font-semibold text-[#1a1a2e] border-b border-gray-100">Phone Number</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {getPaginatedData(table1Data, 'table1').map((row, idx) => (
+                        <tr key={idx} className="hover:bg-orange-50/40">
+                          {row.map((cell, index) => (
+                            <td key={index} className="p-3 border-b border-gray-50 text-[#4a4a68]">{cell}</td>
+                          ))}
+                        </tr>
                       ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              {/* Pagination Controls */}
-              <div className="flex items-center justify-between mt-4">
-                <button
-                  onClick={() => handlePageChange('table1', -1)}
-                  disabled={currentPage.table1 === 1}
-                  className="px-4 py-2 text-gray-700 bg-gray-300 rounded disabled:opacity-50 hover:bg-gray-700 hover:text-white transition"
-                >
-                  Previous
-                </button>
-                <span>
-                  Page {currentPage.table1} of {getPageCount(table1Data)}
-                </span>
-                <button
-                  onClick={() => handlePageChange('table1', 1)}
-                  disabled={currentPage.table1 === getPageCount(table1Data)}
-                  className="px-4 py-2 text-gray-700 bg-gray-300 rounded disabled:opacity-50 hover:bg-gray-400 hover:text-white transition"
-                >
-                  Next
-                </button>
+                    </tbody>
+                  </table>
+                </div>
+                <div className="flex items-center justify-between mt-4 gap-3">
+                  <button
+                    type="button"
+                    onClick={() => handlePageChange('table1', -1)}
+                    disabled={currentPage.table1 === 1}
+                    className="px-4 py-2 text-sm font-semibold text-[#1a1a2e] bg-[#f0f1f5] rounded-full disabled:opacity-50 hover:bg-[#e5e7eb] transition"
+                  >
+                    Previous
+                  </button>
+                  <span className="text-sm text-[#4a4a68]">
+                    Page {currentPage.table1} of {getPageCount(table1Data)}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => handlePageChange('table1', 1)}
+                    disabled={currentPage.table1 === getPageCount(table1Data)}
+                    className="px-4 py-2 text-sm font-semibold text-white rounded-full disabled:opacity-50 transition"
+                    style={{ background: '#f28201' }}
+                  >
+                    Next
+                  </button>
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     );

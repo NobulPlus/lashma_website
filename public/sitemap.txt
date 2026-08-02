@@ -1,2 +1,10 @@
-https://lashma-website.vercel.app/
-https://lashma-website.vercel.app/plan
+https://www.lashma.com/
+https://www.lashma.com/plan
+https://www.lashma.com/about
+https://www.lashma.com/contact
+https://www.lashma.com/provider
+https://www.lashma.com/marketing-agents
+https://www.lashma.com/resources
+https://www.lashma.com/blog
+https://www.lashma.com/privacy
+https://www.lashma.com/cookies-policy

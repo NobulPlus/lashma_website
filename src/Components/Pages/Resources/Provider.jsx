@@ -720,32 +720,34 @@ const jaaraPlusTable = [
     const uniqueLGAs = getUniqueLGAs(data);
 
     return (
-      <div className="mb-6">
-        <div
-          className="flex items-center justify-between p-4 bg-gray-100 rounded shadow cursor-pointer"
+      <div className="mb-5">
+        <button
+          type="button"
+          className="w-full flex items-center justify-between p-4 bg-white rounded-xl border border-gray-100 cursor-pointer text-left"
           onClick={() => toggleTable(tableId)}
+          aria-expanded={visibleTable === tableId}
         >
-          <h3 className="text-lg font-medium">{title}</h3>
+          <h3 className="text-base sm:text-lg font-bold text-[#1a1a2e] font-heading m-0">{title}</h3>
           <span
-            className={`text-orange-500 transform transition-transform ${visibleTable === tableId ? 'rotate-90' : ''}`}
+            className={`text-[#f28201] transform transition-transform ${visibleTable === tableId ? 'rotate-90' : ''}`}
           >
-            <i className="fa-solid fa-arrow-right-long"></i>
+            <i className="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
           </span>
-        </div>
+        </button>
         {visibleTable === tableId && (
-          <div className="p-4 mt-4 bg-white rounded shadow">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mb-4">
+          <div className="p-4 sm:p-5 mt-3 bg-white rounded-xl border border-gray-100">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-4">
               <input
                 type="text"
-                placeholder="Search..."
+                placeholder="Search providers..."
                 value={filterText[tableId]}
                 onChange={(e) => handleFilter(tableId, e.target.value)}
-                className="w-full sm:w-1/2 p-2 border border-gray-300 rounded"
+                className="w-full sm:w-1/2 p-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-orange-200"
               />
               <select
                 value={selectedLGA[tableId]}
                 onChange={(e) => handleLGAFilter(tableId, e.target.value)}
-                className="w-full sm:w-1/2 p-2 border border-gray-300 rounded mt-2 sm:mt-0"
+                className="w-full sm:w-1/2 p-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-orange-200"
               >
                 <option value="">All LGAs</option>
                 {uniqueLGAs.map((lga) => (
@@ -753,48 +755,53 @@ const jaaraPlusTable = [
                 ))}
               </select>
             </div>
-            <table className="w-full border border-collapse border-gray-200 table-auto">
-              <thead>
-                <tr>
-                  {headers.map((header, index) => (
-                    <th
-                      key={index}
-                      className="p-2 border border-gray-300 cursor-pointer hover:bg-gray-100"
-                      onClick={() => handleSort(tableId, index)}
-                    >
-                      {header}
-                      {sortConfig[tableId].key === index && (
-                        <span>{sortConfig[tableId].direction === 'asc' ? ' ↑' : ' ↓'}</span>
-                      )}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {paginatedData.map((row, idx) => (
-                  <tr key={idx}>
-                    {row.map((cell, index) => (
-                      <td key={index} className="p-2 border border-gray-300">{cell}</td>
+            <div className="overflow-x-auto rounded-lg border border-gray-100">
+              <table className="w-full border-collapse table-auto text-sm">
+                <thead>
+                  <tr className="bg-[#f8f9fc]">
+                    {headers.map((header, index) => (
+                      <th
+                        key={index}
+                        className="p-3 text-left font-semibold text-[#1a1a2e] border-b border-gray-100 cursor-pointer hover:bg-orange-50"
+                        onClick={() => handleSort(tableId, index)}
+                      >
+                        {header}
+                        {sortConfig[tableId].key === index && (
+                          <span>{sortConfig[tableId].direction === 'asc' ? ' ↑' : ' ↓'}</span>
+                        )}
+                      </th>
                     ))}
                   </tr>
-                ))}
-              </tbody>
-            </table>
-            <div className="flex items-center justify-between mt-4">
+                </thead>
+                <tbody>
+                  {paginatedData.map((row, idx) => (
+                    <tr key={idx} className="hover:bg-orange-50/40">
+                      {row.map((cell, index) => (
+                        <td key={index} className="p-3 border-b border-gray-50 text-[#4a4a68]">{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="flex items-center justify-between mt-4 gap-3">
               <button
+                type="button"
                 onClick={() => handlePageChange(tableId, -1)}
                 disabled={currentPage[tableId] === 1}
-                className="px-4 py-2 text-gray-700 bg-gray-300 rounded disabled:opacity-50 hover:bg-gray-700 hover:text-white transition"
+                className="px-4 py-2 text-sm font-semibold text-[#1a1a2e] bg-[#f0f1f5] rounded-full disabled:opacity-50 hover:bg-[#e5e7eb] transition"
               >
                 Previous
               </button>
-              <span>
-                Page {currentPage[tableId]} of {pageCount}
+              <span className="text-sm text-[#4a4a68]">
+                Page {currentPage[tableId]} of {pageCount || 1}
               </span>
               <button
+                type="button"
                 onClick={() => handlePageChange(tableId, 1)}
-                disabled={currentPage[tableId] === pageCount}
-                className="px-4 py-2 text-gray-700 bg-gray-300 rounded disabled:opacity-50 hover:bg-gray-400 hover:text-white transition"
+                disabled={currentPage[tableId] === pageCount || pageCount === 0}
+                className="px-4 py-2 text-sm font-semibold text-white rounded-full disabled:opacity-50 transition"
+                style={{ background: '#f28201' }}
               >
                 Next
               </button>
@@ -806,11 +813,19 @@ const jaaraPlusTable = [
   };
 
   return (
-    <div className="container py-10 pt-40 mx-auto">
-      <h2 className="mb-6 text-2xl font-semibold text-center">View Providers</h2>
-      {renderTable('table1', table1Data, ['Provider Name', 'Address', 'LGA'], 'Standard Jaara Plan Hospital')}
-      {renderTable('table3', jaaraPlusTable, ['Provier Name', 'Address', 'LGA'], 'Standard Jaara Plus Plan Hospital')}
-      {renderTable('table2', table2Data, ['Pharmacy Name', 'Address', 'LGA', 'LCDA', 'Phone Number'], 'Community Pharmacy')}
+    <div className="bg-[#f8f9fc] min-h-screen">
+      <div className="section-container pt-36 pb-20">
+        <div className="max-w-3xl mx-auto text-center mb-10">
+          <span className="section-label">Our Network</span>
+          <h1 className="section-heading">Healthcare Providers</h1>
+          <p className="section-subheading">
+            Search and browse ILERA EKO hospitals and community pharmacies across Lagos State.
+          </p>
+        </div>
+        {renderTable('table1', table1Data, ['Provider Name', 'Address', 'LGA'], 'Standard Jaara Plan Hospital')}
+        {renderTable('table3', jaaraPlusTable, ['Provider Name', 'Address', 'LGA'], 'Standard Jaara Plus Plan Hospital')}
+        {renderTable('table2', table2Data, ['Pharmacy Name', 'Address', 'LGA', 'LCDA', 'Phone Number'], 'Community Pharmacy')}
+      </div>
     </div>
   );
 };

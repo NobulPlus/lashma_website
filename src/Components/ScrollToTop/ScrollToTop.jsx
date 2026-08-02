@@ -2,33 +2,23 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
-  const mainRoutes = [
-    '/',
-    '/youtube',
-    '/card',
-    '/break',
-    '/stat',
-    '/gmaps',
-    '/telemedicine',
-    '/programs',
-    '/gap',
-    '/partner',
-    '/contact',
-    '/about',
-    '/plan',
-    '/resources',
-    '/chatbot',
-    '/provider',
-    '/maintenance',
-    '/marketing-agents'
-  ];
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    if (mainRoutes.includes(pathname)) {
-      window.scrollTo(0, 0);
+    if (hash) {
+      const id = hash.replace('#', '');
+      requestAnimationFrame(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          window.scrollTo(0, 0);
+        }
+      });
+      return;
     }
-  }, [pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname, hash]);
 
   return null;
 }

@@ -17,8 +17,10 @@ const About = () => {
                 className="w-full h-auto object-cover"
               />
               {/* Play button overlay */}
-              <Link
-                to="https://youtu.be/ZfI8Qo8E7U8"
+              <a
+                href="https://youtu.be/ZfI8Qo8E7U8"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors duration-300 group"
               >
                 <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -26,7 +28,7 @@ const About = () => {
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </div>
-              </Link>
+              </a>
             </div>
 
             {/* Decorative accent */}

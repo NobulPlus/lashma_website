@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import studio from '../../../assets/images/studio.jpeg';
 
 export default function IleraEkoSpotlight() {
@@ -40,8 +39,10 @@ export default function IleraEkoSpotlight() {
             </ul>
 
             <div className="flex flex-wrap items-center gap-4">
-              <Link
-                to="https://ileraekospotlight.com/"
+              <a
+                href="https://ileraekospotlight.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-white px-7 py-3 rounded-full font-semibold no-underline transition-all duration-300 hover:-translate-y-0.5 text-sm"
                 style={{ background: 'linear-gradient(to right, #f28201, #f59e0b)' }}
               >
@@ -49,14 +50,16 @@ export default function IleraEkoSpotlight() {
                   <path d="M8 5v14l11-7z" />
                 </svg>
                 Listen Live
-              </Link>
-              <Link
-                to="https://ileraekospotlight.com/about"
+              </a>
+              <a
+                href="https://ileraekospotlight.com/about"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm font-semibold no-underline hover:underline transition-colors"
                 style={{ color: '#d97306' }}
               >
                 View Past Episodes →
-              </Link>
+              </a>
             </div>
           </motion.div>
 
@@ -75,8 +78,10 @@ export default function IleraEkoSpotlight() {
                 className="rounded-2xl shadow-card w-full max-w-md object-cover"
               />
               {/* Play Overlay */}
-              <Link
-                to="https://ileraekospotlight.com/"
+              <a
+                href="https://ileraekospotlight.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="absolute inset-0 flex items-center justify-center bg-black/30 rounded-2xl group hover:bg-black/40 transition-colors duration-300"
               >
                 <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -84,7 +89,7 @@ export default function IleraEkoSpotlight() {
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </div>
-              </Link>
+              </a>
 
               {/* Decorative accent behind image */}
               <div className="absolute -z-10 -bottom-3 -right-3 w-full h-full rounded-2xl" style={{ background: 'linear-gradient(to bottom right, rgba(242,130,1,0.15), rgba(245,158,11,0.15))' }} />

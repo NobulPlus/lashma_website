@@ -170,8 +170,9 @@ const Footer = () => {
                 { label: 'About Us', to: '/about' },
                 { label: 'Health Plans', to: '/plan' },
                 { label: 'Help Desk', to: '/contact' },
-                { label: 'Our Network', to: '/coming-soon' },
-                { label: 'FAQ', to: '/coming-soon' },
+                { label: 'Our Network', to: '/provider' },
+                { label: 'FAQ', to: '/plan#faq' },
+                { label: 'Blog', to: '/blog' },
               ].map((item) => (
                 <li key={item.label}>
                   <Link
@@ -246,7 +247,6 @@ const Footer = () => {
             {[
               { label: 'Privacy Policy', to: '/privacy' },
               { label: 'Cookies Policy', to: '/cookies-policy' },
-              { label: 'Terms & Agreement', to: '/coming-soon' },
             ].map((item) => (
               <Link
                 key={item.label}

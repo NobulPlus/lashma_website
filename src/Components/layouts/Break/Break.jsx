@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Break = () => {
   return (
@@ -23,8 +22,10 @@ const Break = () => {
 
         {/* Right: two CTAs */}
         <div className="flex flex-col sm:flex-row items-center gap-3">
-          <Link
-            to="https://bit.ly/change-my-ileraeko-provider"
+          <a
+            href="https://bit.ly/change-my-ileraeko-provider"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white font-bold text-sm px-5 py-2.5 rounded-full no-underline hover:bg-gray-50 hover:shadow-lg transition-all duration-200"
             style={{ color: '#7c3aed' }}
           >
@@ -32,7 +33,7 @@ const Break = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5" />
             </svg>
             Change Hospital
-          </Link>
+          </a>
 
           <a
             href="https://lashma.myclinify.com/paypolicy"

@@ -28,8 +28,10 @@ const Gap = () => {
               We leverage technology to redefine quality healthcare, making it simple, affordable, and holistic for every Lagos resident.
             </p>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-              <Link
-                to="https://lashma.myclinify.com/register"
+              <a
+                href="https://lashma.myclinify.com/register"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-3.5 text-white font-semibold rounded-full no-underline hover:shadow-glow transition-all duration-300 hover:-translate-y-0.5"
                 style={{ background: 'linear-gradient(to right, #f28201, #f59e0b)' }}
               >
@@ -37,7 +39,7 @@ const Gap = () => {
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-              </Link>
+              </a>
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3.5 border-2 border-white/30 text-white font-semibold rounded-full no-underline hover:bg-white/10 hover:border-white/50 transition-all duration-300"

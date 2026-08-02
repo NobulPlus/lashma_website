@@ -1,25 +1,48 @@
-import React from 'react'
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import logo from '../../../assets/lashma-logo.png';
 
 const PageNotFound = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-7xl font-extrabold text-gray-800">404</h1>
-      <h2 className="mt-4 text-2xl font-semibold text-gray-700">Oops! Page not found.</h2>
-      <p className="mt-2 text-gray-500">The page you're looking for doesn't exist.</p>
+    <div className="flex flex-col items-center justify-center min-h-screen px-6 bg-[#f8f9fc]">
+      <Helmet>
+        <title>Page Not Found | LASHMA</title>
+        <meta name="robots" content="noindex" />
+      </Helmet>
 
-      {/* Illustration */}
-      <img
-        src="https://source.unsplash.com/500x300/?lost,road"
-        alt="Not Found"
-        className="mt-6 rounded-lg shadow-lg"
-      />
+      <img src={logo} alt="LASHMA" className="h-14 w-auto mb-8" />
 
-      {/* Go Home Button */}
-      <Link to="/" className="mt-6 px-6 py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition">
-        Go Home
-      </Link>
+      <p
+        className="text-7xl sm:text-8xl font-extrabold font-heading leading-none"
+        style={{ color: '#f28201', letterSpacing: '-0.04em' }}
+      >
+        404
+      </p>
+      <h1 className="mt-4 text-2xl sm:text-3xl font-bold text-[#1a1a2e] font-heading text-center">
+        Page not found
+      </h1>
+      <p className="mt-3 text-[#4a4a68] text-center max-w-md">
+        The page you are looking for does not exist or has been moved. Head back home or explore our health plans.
+      </p>
+
+      <div className="mt-8 flex flex-col sm:flex-row items-center gap-3">
+        <Link
+          to="/"
+          className="inline-flex items-center justify-center px-7 py-3 rounded-full text-white font-semibold text-sm no-underline transition-all hover:-translate-y-0.5"
+          style={{ background: 'linear-gradient(to right, #f28201, #f59e0b)' }}
+        >
+          Go Home
+        </Link>
+        <Link
+          to="/plan"
+          className="inline-flex items-center justify-center px-7 py-3 rounded-full font-semibold text-sm no-underline transition-all hover:-translate-y-0.5"
+          style={{ color: '#d97306', background: '#fef3e2', border: '1px solid rgba(242,130,1,0.2)' }}
+        >
+          View Health Plans
+        </Link>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default PageNotFound
+export default PageNotFound;
