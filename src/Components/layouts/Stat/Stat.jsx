@@ -50,19 +50,19 @@ const Stat = () => {
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="relative bg-white rounded-2xl p-8 text-center border border-gray-100 shadow-soft hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1"
+                className="relative bg-white rounded-2xl w-full h-full min-h-[220px] p-6 sm:p-8 text-center border border-gray-100 shadow-soft hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 flex flex-col items-center justify-center gap-4 overflow-hidden"
               >
                 {/* Icon */}
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${stat.color} flex items-center justify-center mx-auto mb-5`}>
+                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${stat.color} flex items-center justify-center flex-shrink-0`}>
                   <i className={`${stat.icon} text-white text-xl`} style={{ color: 'white' }} />
                 </div>
 
                 {/* Number */}
-                <h3 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2 font-heading" style={{ lineHeight: 1.1 }}>
+                <h3 className="w-full max-w-full px-1 text-[clamp(1.9rem,6vw,3.5rem)] sm:text-4xl md:text-5xl font-extrabold text-gray-900 font-heading leading-none tracking-tight whitespace-nowrap tabular-nums">
                   {counterState && (
                     <CountUp
                       start={0}
@@ -75,7 +75,7 @@ const Stat = () => {
                 </h3>
 
                 {/* Label */}
-                <p className="text-sm font-medium text-gray-500 uppercase tracking-wider m-0">{stat.label}</p>
+                <p className="text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-wider m-0">{stat.label}</p>
               </div>
             ))}
           </div>
