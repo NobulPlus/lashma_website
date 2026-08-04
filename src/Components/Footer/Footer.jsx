@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/lashma-logo.png';
 import jaara from '../../assets/doc/jaara.pdf';
 import jaaraNew from '../../assets/doc/jaaraNew.pdf';
 import diaspora from '../../assets/doc/diaspora.pdf';
@@ -96,13 +97,14 @@ const Footer = () => {
           {/* Col 1 — Brand + newsletter */}
           <div className="lg:col-span-2">
             {/* Brand mark */}
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(to bottom right, #f28201, #f59e0b)' }}>
-                <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <span className="text-white font-extrabold text-lg font-heading tracking-tight">LASHMA</span>
+            <div className="flex items-center gap-4 mb-4">
+              <Link to="/" className="flex items-center gap-3">
+                <img src={logo} alt="LASHMA Logo" className="h-14 w-14 object-contain flex-shrink-0" />
+                <div className="flex flex-col leading-tight">
+                  <span className="text-white font-extrabold text-lg font-heading tracking-tight">LASHMA</span>
+                  <span className="text-slate-400 text-xs sm:text-sm">Your Good Health, Our Mandate</span>
+                </div>
+              </Link>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
               Lagos State Health Management Agency, connecting over 1.5 million Lagos residents to quality, affordable healthcare through the ILERA EKO scheme.
