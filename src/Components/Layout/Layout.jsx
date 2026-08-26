@@ -3,13 +3,11 @@ import CookieConsent from 'react-cookie-consent';
 import Header from '../Heading/Header';
 import Footer from '../Footer/Footer';
 import ScrollTrigger from 'react-scroll-trigger';
-import PublicNoticeModal from '../PublicNotice/PublicNoticeModal';
 
 const Layout = () => {
   return (
     <>
       <ScrollTrigger smooth />
-      <PublicNoticeModal />
       <Header />
       <Outlet />
       <Footer />
