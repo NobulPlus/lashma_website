@@ -194,10 +194,10 @@ const Footer = () => {
             <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Benefit Packages</h4>
             <ul className="space-y-3 mb-8">
               {[
-                { label: 'Standard Jaara Plan', href: jaaraNew },
+                { label: 'Standard Jaara Plan', href: jaara },
+                { label: 'Standard Jaara Plus Plan', href: jaaraPlus },
                 { label: 'Senior Plan', href: seniorsPlan },
                 { label: 'Diaspora Plan', href: diaspora },
-                { label: 'VBOOTH', href: '#' },
               ].map((item) => (
                 <li key={item.label}>
                   <a

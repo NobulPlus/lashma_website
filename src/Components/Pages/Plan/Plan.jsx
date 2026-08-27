@@ -5,8 +5,8 @@ import Head from './head';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import diaspora from '../../../assets/doc/diaspora.pdf';
-import jaara from '../../../assets/doc/jaara2.pdf';
-import jaaraNew from '../../../assets/doc/jaaraNew.pdf';
+import jaara from '../../../assets/doc/jaaraNew.pdf';
+import jaaraPlus from '../../../assets/doc/jaaraPlus.pdf';
 import seniors from '../../../assets/doc/seniors.pdf';
 import PlanComparison from './PlanComparison';
 
@@ -39,7 +39,7 @@ const plansData = [
     tagline: 'More coverage, more peace of mind',
     price: '₦40,000',
     priceNote: 'per individual / year',
-    pdf: jaaraNew,
+    pdf: jaaraPlus,
     gradient: 'from-orange-500 to-amber-500',
     glow: 'rgba(249,115,22,0.12)',
     borderActive: 'border-orange-200',

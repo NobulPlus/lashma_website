@@ -3,8 +3,8 @@ import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faInfoCircle, faTimes } from '@fortawesome/free-solid-svg-icons';
-import jaara from '../../../assets/doc/jaara.pdf';
-import jaaraNew from '../../../assets/doc/jaaraNew.pdf';
+import jaara from '../../../assets/doc/jaaraNew.pdf';
+import jaaraPlus from '../../../assets/doc/jaaraPlus.pdf';
 import seniors from '../../../assets/doc/seniors.pdf';
 
 // ─── Plan comparison data (unchanged) ────────────────────────────────────────
@@ -35,7 +35,7 @@ const plansData = [
     bgColor: 'bg-orange-50',
     accent: '#ea580c',
     popular: true,
-    pdf: jaaraNew,
+    pdf: jaaraPlus,
     benefits: {
       consultation: { visits: 8, physiotherapy: 10, specialists: 'General surgeons, Paediatrician, ENT, Dietician, Gynaecology, Family Physician, Cardiology, Orthopaedics' },
       hospitalCare: { ward: 'Semi-private', days: 21, meals: '1 meal/day' },
