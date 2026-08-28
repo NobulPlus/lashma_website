@@ -38,3 +38,8 @@ dist10.zip
 src/assets/doc/EKOSHANewsBulletinQ32024.pdf
 src/assets/doc/EKOSHANewsBulletinQ32024_compressed.pdf
 
+
+# Local outputs and temporary directories
+output/
+outputs/
+tmp/
