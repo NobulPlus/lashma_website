@@ -175,7 +175,7 @@ const Footer = () => {
                 { label: 'Help Desk', to: '/contact' },
                 { label: 'Our Network', to: '/provider' },
                 { label: 'FAQ', to: '/plan#faq' },
-                { label: 'Blog', to: '/blog' },
+
               ].map((item) => (
                 <li key={item.label}>
                   <Link

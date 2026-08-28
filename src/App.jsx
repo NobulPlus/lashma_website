@@ -12,8 +12,6 @@ const ResourcePage = lazy(() => import('./Components/Pages/Resources/ResoucesPag
 const Provider     = lazy(() => import('./Components/Pages/Resources/Provider'));
 const Maintenance  = lazy(() => import('./Components/Pages/Maintenance/Maintenance'));
 const MarketingAgent = lazy(() => import('./Components/Pages/Resources/Marketing-Agent'));
-const BlogPage     = lazy(() => import('./Components/Pages/Blog/BlogPage'));
-const SingleBlogPost = lazy(() => import('./Components/Pages/Blog/SingleBlogPost'));
 const Cookies      = lazy(() => import('./Components/Pages/Resources/Cookies'));
 const Privacy      = lazy(() => import('./Components/Pages/Resources/Privacy'));
 const PageNotFound = lazy(() => import('./Components/Pages/PageNotFound/PageNotFound'));
@@ -41,8 +39,6 @@ function App() {
             <Route path="provider"         element={<Provider />} />
             <Route path="maintenance"      element={<Maintenance />} />
             <Route path="marketing-agents" element={<MarketingAgent />} />
-            <Route path="blog"             element={<BlogPage />} />
-            <Route path="blog/:id"         element={<SingleBlogPost />} />
             <Route path="cookies-policy"   element={<Cookies />} />
             <Route path="privacy"          element={<Privacy />} />
           </Route>
