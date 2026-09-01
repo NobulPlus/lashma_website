@@ -19,6 +19,7 @@ import Gap from '../layouts/Gap/Gap';
 import Partner from '../layouts/Partner/Partner';
 import ZohoChat from '../Chatbot/ZohoChat';
 import IleraEkoSpotlight from '../layouts/EkoSpotLight/IleraEkoSpotLight';
+import Modal3 from '../Modal/Modal3';
 
 const Home = () => {
   useEffect(() => {
@@ -35,6 +36,9 @@ const Home = () => {
         />
         <link rel="canonical" href="https://www.lashma.com/" />
       </Helmet>
+
+      {/* Homepage-only notice modal */}
+      <Modal3 />
 
       {/* First viewport: brand story + enroll path */}
       <Hero />
