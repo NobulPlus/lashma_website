@@ -4,9 +4,15 @@ import { CalendarDays, ExternalLink, FileText, Newspaper } from 'lucide-react';
 import ekosha from '../../../assets/doc/ekosha.pdf';
 import EKSbulletinQ3 from '../../../assets/doc/EKOSHANewsBulletinQ32024 - converted.pdf';
 import ileraEkoNewsletter from '../../../assets/doc/ilera-eko-newsletter-2026.pdf';
+import drugFormulary from '../../../assets/doc/ilera-eko-drug-formulary.pdf';
 import ileraEkoNewsletterPreview from '../../../assets/images/ilera-eko-newsletter-2026-preview.jpg';
 
 const resources = [
+  {
+    title: 'ILERA EKO Drug Formulary',
+    description: 'The official list of approved medicines covered under the ILERA EKO health insurance scheme. Intended for enrollees, providers, and community pharmacists.',
+    fileUrl: drugFormulary,
+  },
   {
     title: 'EKOSHA Provider',
     description: 'Guidelines and information for EKOSHA healthcare providers.',
