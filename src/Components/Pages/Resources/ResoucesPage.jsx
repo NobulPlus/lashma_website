@@ -129,7 +129,7 @@ const ResoucesPage = () => {
   const archivedNewsletters = newsletters.filter((newsletter) => !newsletter.featured);
 
   return (
-    <div className="bg-[#f8f9fc] min-h-screen">
+    <div className="bg-[#f8f9fc]">
       <Helmet>
         <title>Resources | LASHMA</title>
         <meta name="description" content="Read LASHMA and EKOSHA newsletters, bulletins, and provider documents." />

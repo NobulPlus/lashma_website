@@ -53,7 +53,7 @@ const MarketingAgent = () => {
     const getPageCount = (data) => Math.ceil(data.length / rowsPerPage);
   
     return (
-      <div className="bg-[#f8f9fc] min-h-screen">
+      <div className="bg-[#f8f9fc]">
         <div className="section-container pt-36 pb-20">
           <div className="max-w-3xl mx-auto text-center mb-10">
             <span className="section-label">Our Network</span>

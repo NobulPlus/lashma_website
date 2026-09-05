@@ -41,8 +41,8 @@ function App() {
             <Route path="marketing-agents" element={<MarketingAgent />} />
             <Route path="cookies-policy"   element={<Cookies />} />
             <Route path="privacy"          element={<Privacy />} />
+            <Route path="*"                element={<PageNotFound />} />
           </Route>
-          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Suspense>
     </Router>

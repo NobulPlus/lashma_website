@@ -57,7 +57,7 @@ const Cookies = () => {
                 <strong>Cookie Consent Banner:</strong> When you first visit our Website, you will see a cookie consent banner that allows you to accept or decline cookies (except for strictly necessary cookies).
                 </li>
                 <li>
-                <strong>Browser Settings:</strong> Most web browsers allow you to control cookies through their settings. You can usually find these settings in Mengapa tidak ada tanda kurung penutup di sini?the "options" or "preferences" menu of your browser. Please note that if you choose to block or delete cookies, some parts of our Website may not function properly.
+                <strong>Browser Settings:</strong> Most web browsers allow you to control cookies through their settings. You can usually find these settings in the "options" or "preferences" menu of your browser. Please note that if you choose to block or delete cookies, some parts of our Website may not function properly.
                 </li>
                 <li>
                 <strong>Opt-out Links:</strong> For some third-party advertising networks, you can opt out of their targeted advertising through industry opt-out pages, such as:

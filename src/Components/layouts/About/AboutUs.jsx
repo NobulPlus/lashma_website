@@ -6,6 +6,28 @@ import PSPhoto from '../../../assets/All/Mgt/ps.png';
 // ─── Images ───────────────────────────────────────────────────────────────────
 const genericAvatar = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='100%25' height='100%25'%3E%3Crect width='24' height='24' fill='%23e2e8f0'/%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z' fill='%2394a3b8'/%3E%3C/svg%3E";
 
+const getInitials = (name) =>
+  name
+    .split(' ')
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join('')
+    .toUpperCase();
+
+// Real photo when we have one; otherwise a branded initials placeholder
+// instead of a generic gray silhouette.
+const PersonPhoto = ({ person, className }) =>
+  person.photo === genericAvatar ? (
+    <div className={`flex items-center justify-center bg-gradient-to-br ${person.accent} ${className}`}>
+      <span className="text-3xl font-extrabold text-white/90 tracking-wide">
+        {getInitials(person.name)}
+      </span>
+    </div>
+  ) : (
+    <img src={person.photo} alt={person.name} className={`object-cover object-top ${className}`} />
+  );
+
 // ─── LinkedIn SVG icon ────────────────────────────────────────────────────────
 const LinkedInIcon = ({ className = 'w-4 h-4' }) => (
   <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -154,10 +176,9 @@ const MgtCard = ({ person, index, onClick }) => (
   >
     {/* Photo area */}
     <div className="relative overflow-hidden bg-slate-50 h-64">
-      <img
-        src={person.photo}
-        alt={person.name}
-        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+      <PersonPhoto
+        person={person}
+        className="w-full h-full group-hover:scale-105 transition-transform duration-500"
       />
       {/* Gradient overlay at bottom */}
       <div
@@ -261,11 +282,7 @@ const ProfileModal = ({ person, onClose }) => {
 
         {/* Modal Left/Top Photo Column */}
         <div className="md:w-64 bg-slate-50 flex-shrink-0 relative flex flex-col items-center justify-start overflow-hidden min-h-[220px] md:min-h-full">
-          <img
-            src={person.photo}
-            alt={person.name}
-            className="w-full h-full object-cover object-top"
-          />
+          <PersonPhoto person={person} className="w-full h-full" />
           <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(15,23,42,0.4) 0%, transparent 60%)' }} />
           <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold text-white shadow bg-gradient-to-r ${person.accent || 'from-orange-500 to-amber-500'}`}>
             {person.badge || person.acronym}

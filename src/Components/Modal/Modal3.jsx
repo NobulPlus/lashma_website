@@ -35,32 +35,25 @@ const Modal3 = () => {
             justifyContent: 'center',
           },
           content: {
-            position: 'relative',
-            inset: 'unset',
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            transform: 'translate(-50%, -50%)',
             border: 'none',
             background: 'transparent',
             padding: 0,
-            maxWidth: '90vw',
+            width: 'min(560px, 92vw)',
+            maxWidth: 'min(560px, 92vw)',
             maxHeight: '90vh',
             overflow: 'visible',
           },
         }}
       >
-        <div
-          style={{
-            position: 'relative',
-            background: '#fff',
-            borderRadius: '12px',
-            boxShadow: '0 24px 64px rgba(0,0,0,0.4)',
-            overflow: 'hidden',
-            maxWidth: '90vw',
-            maxHeight: '90vh',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          {/* Close button */}
+        {/* Non-scrolling wrapper: keeps the close button fixed in place
+            while the box below it scrolls independently. */}
+        <div style={{ position: 'relative' }}>
           <button
             onClick={closeModal}
             aria-label="Close modal"
@@ -89,16 +82,26 @@ const Modal3 = () => {
             &times;
           </button>
 
-          <img
-            src={noticeImage}
-            alt="LASHMA Notice"
+          <div
             style={{
-              display: 'block',
-              maxWidth: '100%',
-              maxHeight: '88vh',
-              objectFit: 'contain',
+              background: '#fff',
+              borderRadius: '12px',
+              boxShadow: '0 24px 64px rgba(0,0,0,0.4)',
+              overflowX: 'hidden',
+              overflowY: 'auto',
+              maxHeight: '90vh',
             }}
-          />
+          >
+            <img
+              src={noticeImage}
+              alt="LASHMA Notice"
+              style={{
+                display: 'block',
+                width: '100%',
+                height: 'auto',
+              }}
+            />
+          </div>
         </div>
       </Modal>
     </div>
