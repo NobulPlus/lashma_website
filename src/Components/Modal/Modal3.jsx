@@ -6,7 +6,7 @@ import noticeImage from '../../assets/images/whatsapp-notice-sep2026.jpeg';
 
 Modal.setAppElement('#root');
 
-const Modal3 = () => {
+const Modal3 = ({ onClose }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   useEffect(() => {
@@ -16,6 +16,7 @@ const Modal3 = () => {
 
   const closeModal = () => {
     setModalIsOpen(false);
+    onClose?.();
   };
 
   return (

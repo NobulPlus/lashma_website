@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Hero from './Hero/Hero';
 import ReactGA from 'react-ga4';
 import { Helmet } from 'react-helmet-async';
@@ -20,8 +20,11 @@ import Partner from '../layouts/Partner/Partner';
 import ZohoChat from '../Chatbot/ZohoChat';
 import IleraEkoSpotlight from '../layouts/EkoSpotLight/IleraEkoSpotLight';
 import Modal3 from '../Modal/Modal3';
+import IntentPrompt from './IntentPrompt';
 
 const Home = () => {
+  const [noticeOpen, setNoticeOpen] = useState(true);
+
   useEffect(() => {
     ReactGA.send({ hitType: 'pageview', page: window.location.pathname + window.location.search });
   }, []);
@@ -38,7 +41,11 @@ const Home = () => {
       </Helmet>
 
       {/* Homepage-only notice modal */}
-      <Modal3 />
+      <Modal3 onClose={() => setNoticeOpen(false)} />
+
+      {/* Non-blocking wayfinding prompt: waits for the notice modal to be
+          dismissed first so the two never stack. */}
+      <IntentPrompt active={!noticeOpen} />
 
       {/* First viewport: brand story + enroll path */}
       <Hero />
