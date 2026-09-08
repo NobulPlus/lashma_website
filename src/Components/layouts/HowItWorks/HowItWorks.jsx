@@ -37,7 +37,7 @@ const steps = [
       </svg>
     ),
     title: 'Pick a Hospital',
-    description: 'Select from 634+ accredited care providers across Lagos State: GPs, specialists and hospitals near you.',
+    description: 'Select from 640+ accredited care providers across Lagos State: GPs, specialists and hospitals near you.',
     color: 'from-emerald-500 to-teal-600',
     lightBg: 'bg-emerald-50',
     border: 'border-emerald-100',

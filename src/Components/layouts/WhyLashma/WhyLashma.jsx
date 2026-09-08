@@ -19,7 +19,7 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
       </svg>
     ),
-    title: '634+ Care Providers',
+    title: '640+ Care Providers',
     description: 'A sprawling network of accredited hospitals, clinics, and specialists spread across all Lagos districts.',
     gradient: 'from-cyan-500 to-sky-600',
     glow: 'rgba(6,182,212,0.15)',
@@ -31,7 +31,7 @@ const features = [
       </svg>
     ),
     title: 'Full Maternity Cover',
-    description: 'Comprehensive antenatal, delivery, and postnatal care, with over 87,000 maternal cases handled and counting.',
+    description: 'Comprehensive antenatal, delivery, and postnatal care, with over 90,000 maternal cases handled and counting.',
     gradient: 'from-rose-500 to-pink-600',
     glow: 'rgba(244,63,94,0.15)',
   },

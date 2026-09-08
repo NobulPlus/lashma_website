@@ -8,8 +8,8 @@ const trustPills = [
 ];
 
 const stats = [
-  { value: '1.5M+', label: 'Lives Covered' },
-  { value: '634+', label: 'Care Providers' },
+  { value: '1.89M+', label: 'Lives Covered' },
+  { value: '640+', label: 'Care Providers' },
   { value: '4', label: 'Available Plans' },
 ];
 
