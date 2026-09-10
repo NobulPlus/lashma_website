@@ -4,7 +4,7 @@ import ScrollTrigger from 'react-scroll-trigger';
 
 const stats = [
   {
-    value: 1897203,
+    value: 1932506,
     suffix: '+',
     label: 'Lives Covered',
     icon: 'fa-solid fa-users',
