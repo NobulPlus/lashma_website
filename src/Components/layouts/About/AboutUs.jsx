@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import PSPhoto from '../../../assets/All/Mgt/ps.png';
+import adetoroPhoto from '../../../assets/All/Mgt/adetoro.jpg';
+import uchePhoto from '../../../assets/All/Mgt/uche.jpeg';
+import aramidePhoto from '../../../assets/All/Mgt/IMG2.png';
+import tawaPhoto from '../../../assets/All/Mgt/img9.png';
 
 // ─── Images ───────────────────────────────────────────────────────────────────
 const genericAvatar = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='100%25' height='100%25'%3E%3Crect width='24' height='24' fill='%23e2e8f0'/%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z' fill='%2394a3b8'/%3E%3C/svg%3E";
@@ -15,17 +19,33 @@ const getInitials = (name) =>
     .join('')
     .toUpperCase();
 
-// Real photo when we have one; otherwise a branded initials placeholder
-// instead of a generic gray silhouette.
+// Real photo when available; otherwise a refined studio placeholder with an executive avatar disc
 const PersonPhoto = ({ person, className }) =>
   person.photo === genericAvatar ? (
-    <div className={`flex items-center justify-center bg-gradient-to-br ${person.accent} ${className}`}>
-      <span className="text-3xl font-extrabold text-white/90 tracking-wide">
-        {getInitials(person.name)}
-      </span>
+    <div className={`relative flex items-center justify-center bg-gradient-to-b from-slate-100 via-slate-50 to-slate-100 overflow-hidden ${className}`}>
+      {/* Soft ambient background accent glow */}
+      <div
+        className={`absolute -top-10 -right-10 w-44 h-44 rounded-full opacity-20 blur-2xl bg-gradient-to-br ${person.accent}`}
+      />
+      <div
+        className={`absolute -bottom-10 -left-10 w-44 h-44 rounded-full opacity-20 blur-2xl bg-gradient-to-tr ${person.accent}`}
+      />
+
+      {/* Refined Executive Avatar Disc */}
+      <div className="relative z-10 flex flex-col items-center">
+        <div className={`w-24 h-24 rounded-2xl shadow-md border-2 border-white/90 flex items-center justify-center bg-gradient-to-br ${person.accent} transition-transform duration-500 group-hover:scale-105`}>
+          <span className="text-2xl font-black text-white tracking-wider">
+            {getInitials(person.name)}
+          </span>
+        </div>
+      </div>
     </div>
   ) : (
-    <img src={person.photo} alt={person.name} className={`object-cover object-top ${className}`} />
+    <img
+      src={person.photo}
+      alt={person.name}
+      className={`object-cover object-[center_15%] ${className}`}
+    />
   );
 
 // ─── LinkedIn SVG icon ────────────────────────────────────────────────────────
@@ -67,7 +87,7 @@ const managementRoles = [
     badge: 'HPME',
     tagline: 'Driving data-backed policy insights, quality assurance, and continuous program evaluation.',
     bio: "Leads the evaluation of LASHMA's programs and policies, ensuring evidence-based decision making and continuous improvement in service delivery. Oversees data analytics, strategic performance metrics, and compliance across all health insurance schemes.",
-    photo: genericAvatar,
+    photo: adetoroPhoto,
     accent: 'from-amber-500 to-orange-500',
     linkedin: 'https://www.linkedin.com/in/adetoro-tayo-adetoro-7196ab32/',
   },
@@ -89,7 +109,7 @@ const managementRoles = [
     badge: 'HSAC',
     tagline: 'Expanding healthcare coverage through grassroots mobilization and agent networks.',
     bio: "Manages LASHMA's sales strategy and field agent distribution network. Drives mass enrollment initiatives across all local government areas through targeted grassroots campaigns, agent capacity building, and innovative field recruitment.",
-    photo: genericAvatar,
+    photo: uchePhoto,
     accent: 'from-cyan-500 to-sky-600',
     linkedin: 'https://www.linkedin.com/in/uche-igweonyia-377823182/',
   },
@@ -111,7 +131,7 @@ const managementRoles = [
     badge: 'HOF',
     tagline: 'Safeguarding fiscal discipline, transparent accounting, and prompt claims settlement.',
     bio: 'Oversees all financial planning, budgeting, provider claims processing, and statutory financial reporting for LASHMA. Ensures rigorous fiscal responsibility, audit compliance, and adherence to Lagos State public sector financial management regulations.',
-    photo: genericAvatar,
+    photo: aramidePhoto,
     accent: 'from-teal-500 to-emerald-600',
     linkedin: 'https://www.linkedin.com/in/aramide-ojo-7b7a8a396/',
   },
@@ -133,7 +153,7 @@ const managementRoles = [
     badge: 'EKOSHA',
     tagline: 'Advancing social health protection and healthcare equity for vulnerable residents.',
     bio: 'Coordinates the operations, beneficiary verification, and social impact interventions of the EKOSHA programme. Dedicated to ensuring vulnerable and indigent populations across Lagos State receive equitable, dignified healthcare coverage.',
-    photo: genericAvatar,
+    photo: tawaPhoto,
     accent: 'from-rose-500 to-pink-600',
     linkedin: null,
   },
@@ -143,8 +163,8 @@ const managementRoles = [
 const values = [
   { icon: '🏥', title: 'Universal Coverage', desc: 'Every Lagos resident deserves access to quality healthcare regardless of income.' },
   { icon: '🤝', title: 'Accountability', desc: 'We are stewards of public trust, operating transparently in every interaction.' },
-  { icon: '💡', title: 'Innovation', desc: 'Continuously improving our systems, processes, and care delivery models.' },
-  { icon: '❤️', title: 'Compassion', desc: 'Every beneficiary is a person — we lead with empathy in everything we do.' },
+  { icon: '💡', title: 'Innovation', desc: 'Pioneering modern digital solutions to make healthcare accessible and seamless.' },
+  { icon: '❤️', title: 'Empathy', desc: 'Putting residents at the center of every policy, process, and healthcare interaction.' },
 ];
 
 const containerVariants = {
@@ -175,15 +195,10 @@ const MgtCard = ({ person, index, onClick }) => (
     className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-orange-500/50"
   >
     {/* Photo area */}
-    <div className="relative overflow-hidden bg-slate-50 h-64">
+    <div className="relative overflow-hidden bg-slate-50 h-64 border-b border-slate-100">
       <PersonPhoto
         person={person}
         className="w-full h-full group-hover:scale-105 transition-transform duration-500"
-      />
-      {/* Gradient overlay at bottom */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
-        style={{ background: 'linear-gradient(to top, rgba(255,255,255,0.95), transparent)' }}
       />
       {/* Acronym badge */}
       <div className={`absolute top-3 right-3 px-2.5 py-1 rounded-full text-xs font-bold text-white shadow-sm bg-gradient-to-r ${person.accent}`}>

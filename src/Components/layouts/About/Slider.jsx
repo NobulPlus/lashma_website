@@ -8,6 +8,8 @@ import 'swiper/css/scrollbar';
 import IMG1 from '../../../assets/All/Mgt/IMG2.png';
 import IMG2 from '../../../assets/All/Mgt/img9.png';
 import PSImg from '../../../assets/All/Mgt/ps.png';
+import AdetoroImg from '../../../assets/All/Mgt/adetoro.jpg';
+import UcheImg from '../../../assets/All/Mgt/uche.jpeg';
 
 const Slider = () => {
   const slides = [
@@ -26,7 +28,7 @@ const Slider = () => {
     {
       title: "Head, Policy, Regulation & Member Engagement (HPRME)",
       name: "Adetoro Tayo Adetoro",
-      img: null,
+      img: AdetoroImg,
       linkedin: "https://www.linkedin.com/in/adetoro-tayo-adetoro-7196ab32/",
     },
     {
@@ -38,7 +40,7 @@ const Slider = () => {
     {
       title: "Head, Sales & Agent Coordination (HSAC)",
       name: "Uche Igweonyia",
-      img: null,
+      img: UcheImg,
       linkedin: "https://www.linkedin.com/in/uche-igweonyia-377823182/",
     },
     {
