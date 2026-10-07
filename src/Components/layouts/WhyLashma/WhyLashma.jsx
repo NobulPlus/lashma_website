@@ -31,7 +31,7 @@ const features = [
       </svg>
     ),
     title: 'Full Maternity Cover',
-    description: 'Comprehensive antenatal, delivery, and postnatal care, with over 90,000 maternal cases handled and counting.',
+    description: 'Comprehensive antenatal, delivery, and postnatal care, with over 92,000 maternal cases handled and counting.',
     gradient: 'from-rose-500 to-pink-600',
     glow: 'rgba(244,63,94,0.15)',
   },
