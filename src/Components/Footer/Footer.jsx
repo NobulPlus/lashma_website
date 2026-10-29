@@ -3,7 +3,6 @@ import emailjs from '@emailjs/browser';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/lashma-logo.png';
 import jaara from '../../assets/doc/jaara.pdf';
-import jaaraNew from '../../assets/doc/jaaraNew.pdf';
 import jaaraPlus from '../../assets/doc/jaaraPlus.pdf';
 import diaspora from '../../assets/doc/diaspora.pdf';
 import seniorsPlan from '../../assets/doc/seniorsPlan.pdf';

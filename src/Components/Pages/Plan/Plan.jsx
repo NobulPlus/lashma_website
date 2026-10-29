@@ -5,7 +5,7 @@ import Head from './head';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import diaspora from '../../../assets/doc/diaspora.pdf';
-import jaara from '../../../assets/doc/jaaraNew.pdf';
+import jaara from '../../../assets/doc/jaara.pdf';
 import jaaraPlus from '../../../assets/doc/jaaraPlus.pdf';
 import seniors from '../../../assets/doc/seniors.pdf';
 import PlanComparison from './PlanComparison';

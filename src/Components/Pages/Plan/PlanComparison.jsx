@@ -3,7 +3,7 @@ import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faInfoCircle, faTimes } from '@fortawesome/free-solid-svg-icons';
-import jaara from '../../../assets/doc/jaaraNew.pdf';
+import jaara from '../../../assets/doc/jaara.pdf';
 import jaaraPlus from '../../../assets/doc/jaaraPlus.pdf';
 import seniors from '../../../assets/doc/seniors.pdf';
 
@@ -21,11 +21,11 @@ const plansData = [
       eyecare: { lensLimit: '₦10,000', pterygium: true, cataract: true },
       cancer: { limit: '₦2,000,000', types: 'Breast, Prostate, Cervix, Colorectal, Burkitt\'s Lymphoma, Retinoblastoma' },
       renalDialysis: { sessions: 3 },
-      annualScreening: { startYear: 2, tests: 'Physical exam, Urinalysis, FBS, Cholesterol, Eye exam, CA-125, Stool occult, Chest X-ray, Pap smear, Sono Breasts, HBsAg, PSA' },
+      annualScreening: { startYear: 1, tests: 'Physical exam, Urinalysis, FBS, Cholesterol, Eye exam, ALT, Stool occult, Chest X-ray, HBsAg, Creatinine, Pap smear, Albumin, Sono Breasts, Abdomen/Pelvic USS, PSA' },
       maternalCare: true,
       homeCare: false,
       telemedicine: true,
-      virtualBooth: false,
+      virtualBooth: true,
       premiums: { individual: '₦15,000', family4: '₦55,000', family6: '₦80,000' },
     },
   },
