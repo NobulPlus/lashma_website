@@ -21,7 +21,7 @@ const plansData = [
       eyecare: { lensLimit: '₦10,000', pterygium: true, cataract: true },
       cancer: { limit: '₦2,000,000', types: 'Breast, Prostate, Cervix, Colorectal, Burkitt\'s Lymphoma, Retinoblastoma' },
       renalDialysis: { sessions: 3 },
-      annualScreening: { startYear: 1, tests: 'Physical exam, Urinalysis, FBS, Cholesterol, Eye exam, ALT, Stool occult, Chest X-ray, HBsAg, Creatinine, Pap smear, Albumin, Sono Breasts, Abdomen/Pelvic USS, PSA' },
+      annualScreening: { startYear: 2, tests: 'Physical exam, Urinalysis, FBS, Cholesterol, Eye exam, ALT, Stool occult, Chest X-ray, HBsAg, Creatinine, Pap smear, Albumin, Sono Breasts, Abdomen/Pelvic USS, PSA' },
       maternalCare: true,
       homeCare: false,
       telemedicine: true,
