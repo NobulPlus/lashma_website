@@ -87,11 +87,11 @@ const FeaturedNewsletter = ({ newsletter }) => (
           {newsletter.title}
         </h2>
 
-        <p className="mt-3 max-w-2xl text-base leading-7 text-white/82">
+        <p className="mt-3 max-w-2xl text-base leading-7 text-white/80">
           {newsletter.description}
         </p>
 
-        <div className="mt-6 flex flex-wrap gap-3 text-sm text-white/88">
+        <div className="mt-6 flex flex-wrap gap-3 text-sm text-white/90">
           <span className="inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2">
             <CalendarDays size={16} aria-hidden="true" />
             {newsletter.date}
