@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Award, Users, HeartPulse, ArrowRight, Maximize2, X, ShieldCheck } from 'lucide-react';
+import { Award, ArrowRight, Maximize2, X } from 'lucide-react';
 import milestonePoster from '../../assets/images/200m.jpeg';
 
 const MilestoneBanner = () => {
@@ -27,28 +27,12 @@ const MilestoneBanner = () => {
   }, [isLightboxOpen]);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#0b1222] via-[#111c35] to-[#0b1222] text-white py-14 md:py-20 border-y border-amber-500/20 shadow-2xl">
-      {/* Ambient background glows */}
+    <section className="relative overflow-hidden bg-[#fff8ef] text-slate-900 py-16 md:py-24 border-y border-orange-100">
+      {/* Single soft glow behind the poster */}
       <div className="absolute inset-0 pointer-events-none">
         <div
-          className="absolute -top-32 left-1/4 w-96 h-96 rounded-full blur-3xl opacity-25"
+          className="absolute top-1/2 right-[10%] -translate-y-1/2 w-[32rem] h-[32rem] rounded-full blur-3xl opacity-[0.15]"
           style={{ background: '#f28201' }}
-        />
-        <div
-          className="absolute -bottom-32 right-1/4 w-[28rem] h-[28rem] rounded-full blur-3xl opacity-20"
-          style={{ background: '#eab308' }}
-        />
-        <div
-          className="absolute top-1/2 left-3/4 -translate-y-1/2 w-80 h-80 rounded-full blur-3xl opacity-15"
-          style={{ background: '#f97316' }}
-        />
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
-            backgroundSize: '40px 40px',
-          }}
         />
       </div>
 
@@ -63,58 +47,28 @@ const MilestoneBanner = () => {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className="lg:col-span-7 flex flex-col justify-center"
           >
-            {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide uppercase mb-5 self-start bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-400/40 text-amber-300 shadow-sm">
-              <Award className="w-4 h-4 text-amber-400 animate-bounce" />
-              <span>A Major Milestone</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse ml-1" />
-            </div>
+            {/* Eyebrow */}
+            <p className="flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase text-orange-700 mb-4">
+              <Award className="w-4 h-4" />
+              Milestone reached
+            </p>
 
-            {/* Main Headline */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading tracking-tight leading-tight text-white mb-4">
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-amber-200">
-                2 MILLION+ ENROLLEES
+            {/* Headline: one big number, one plain statement */}
+            <h2 className="font-heading text-slate-900 mb-5">
+              <span className="block text-5xl sm:text-6xl md:text-7xl font-black tracking-tight leading-none text-orange-600">
+                2,000,000+
               </span>
-              <span className="text-white block text-2xl sm:text-3xl md:text-4xl font-extrabold mt-1">
-                2 Million Lives. One Healthier Lagos.
+              <span className="block text-2xl sm:text-3xl font-bold leading-snug mt-3">
+                Lagos residents now covered by ILERA EKO
               </span>
             </h2>
 
             {/* Description */}
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-6 max-w-2xl font-light">
-              Together, we are advancing access to affordable, quality healthcare and building a healthier Lagos State.
-              With over <strong className="text-white font-semibold">2,000,000+ residents</strong> protected under the <span className="text-orange-400 font-medium">ILERA EKO</span> scheme, we remain steadfast in our promise: <em className="text-amber-300 not-italic font-medium">leaving no one behind</em>.
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
+              Every enrollee can get affordable, quality care at more than{' '}
+              <strong className="text-slate-900 font-semibold">640 approved facilities</strong> across the state.
+              If you or your family are not covered yet, there is a plan for you.
             </p>
-
-            {/* Key Stats Bar */}
-            <div className="grid grid-cols-3 gap-3 sm:gap-4 p-4 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-md mb-8 max-w-2xl">
-              <div className="text-center sm:text-left">
-                <div className="flex items-center gap-1.5 text-amber-400 mb-1 justify-center sm:justify-start">
-                  <Users className="w-4 h-4" />
-                  <span className="text-xs uppercase font-medium text-slate-400">Enrollees</span>
-                </div>
-                <div className="text-xl sm:text-2xl font-bold font-heading text-white">2.0M+</div>
-                <div className="text-[11px] text-slate-400 hidden sm:block">Lives Protected</div>
-              </div>
-
-              <div className="text-center sm:text-left border-x border-white/10 px-2 sm:px-4">
-                <div className="flex items-center gap-1.5 text-orange-400 mb-1 justify-center sm:justify-start">
-                  <HeartPulse className="w-4 h-4" />
-                  <span className="text-xs uppercase font-medium text-slate-400">Network</span>
-                </div>
-                <div className="text-xl sm:text-2xl font-bold font-heading text-white">640+</div>
-                <div className="text-[11px] text-slate-400 hidden sm:block">Approved Facilities</div>
-              </div>
-
-              <div className="text-center sm:text-left">
-                <div className="flex items-center gap-1.5 text-amber-400 mb-1 justify-center sm:justify-start">
-                  <ShieldCheck className="w-4 h-4" />
-                  <span className="text-xs uppercase font-medium text-slate-400">Care Quality</span>
-                </div>
-                <div className="text-xl sm:text-2xl font-bold font-heading text-white">100%</div>
-                <div className="text-[11px] text-slate-400 hidden sm:block">Mandate Driven</div>
-              </div>
-            </div>
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
@@ -122,7 +76,7 @@ const MilestoneBanner = () => {
                 href="https://lashma.myclinify.com/register"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full font-bold text-white text-sm bg-gradient-to-r from-[#f28201] to-[#e65100] hover:from-[#e65100] hover:to-[#f28201] shadow-lg shadow-orange-900/40 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full font-bold text-white text-sm bg-gradient-to-r from-[#f28201] to-[#e65100] hover:from-[#e65100] hover:to-[#f28201] shadow-lg shadow-orange-500/30 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
               >
                 <span>Join the 2 Million — Enroll Today</span>
                 <ArrowRight className="w-4 h-4" />
@@ -130,19 +84,10 @@ const MilestoneBanner = () => {
 
               <Link
                 to="/plan"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-semibold text-white text-sm bg-white/10 hover:bg-white/15 border border-white/20 transition-all duration-300 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-semibold text-slate-800 text-sm bg-white hover:bg-orange-50 border border-slate-300 hover:border-orange-300 transition-all duration-300 hover:-translate-y-0.5"
               >
                 Explore Health Plans
               </Link>
-
-              <button
-                type="button"
-                onClick={() => setIsLightboxOpen(true)}
-                className="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-full text-xs font-medium text-amber-300 hover:text-white hover:bg-white/5 transition-colors sm:self-center"
-              >
-                <Maximize2 className="w-4 h-4" />
-                <span>View Full Poster</span>
-              </button>
             </div>
           </motion.div>
 
@@ -156,7 +101,11 @@ const MilestoneBanner = () => {
           >
             <div
               onClick={() => setIsLightboxOpen(true)}
-              className="group relative cursor-pointer rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-400/30 hover:border-amber-400 transition-all duration-500 max-w-sm sm:max-w-md w-full bg-slate-900/60 backdrop-blur-sm"
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setIsLightboxOpen(true)}
+              aria-label="View full milestone poster"
+              className="group relative cursor-pointer rounded-2xl overflow-hidden shadow-2xl shadow-orange-900/20 ring-1 ring-slate-900/10 hover:ring-orange-400/60 transition-all duration-300 max-w-sm sm:max-w-md w-full -rotate-1 hover:rotate-0"
               title="Click to view full poster"
             >
               {/* Outer decorative ring */}
@@ -174,11 +123,6 @@ const MilestoneBanner = () => {
                 className="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-500 block"
                 loading="lazy"
               />
-
-              {/* Badge overlay on top-right */}
-              <div className="absolute top-3 right-3 z-10 px-3 py-1 rounded-full bg-[#f28201] text-white text-[11px] font-bold shadow-lg uppercase tracking-wider flex items-center gap-1">
-                <span>Official Milestone</span>
-              </div>
             </div>
           </motion.div>
 
