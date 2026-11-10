@@ -4,7 +4,7 @@ import ScrollTrigger from 'react-scroll-trigger';
 
 const stats = [
   {
-    value: 1988300,
+    value: 2000000,
     suffix: '+',
     label: 'Lives Covered',
     icon: 'fa-solid fa-users',
@@ -44,8 +44,7 @@ const Stat = () => {
             <span className="section-label">Impact & Reach</span>
             <h2 className="section-heading">Our Numbers Speak</h2>
             <p className="section-subheading">
-              We have over 640 Healthcare Facilities and more than 1.98 million lives registered on the scheme
-              as of the end of September 2026, with numbers continuing to grow.
+              We have over 640 Healthcare Facilities and more than 2 million lives registered on the scheme, with numbers continuing to grow.
             </p>
           </div>
 

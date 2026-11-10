@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Hero from './Hero/Hero';
 import ReactGA from 'react-ga4';
 import { Helmet } from 'react-helmet-async';
 import SurveyBanner from './SurveyBanner';
+import MilestoneBanner from './MilestoneBanner';
 
 import YoutubeVid from '../layouts/YoutubeVid/YoutubeVid';
 import Testimonials from '../layouts/Testimonials/Testimonials';
@@ -19,12 +20,9 @@ import Gap from '../layouts/Gap/Gap';
 import Partner from '../layouts/Partner/Partner';
 import ZohoChat from '../Chatbot/ZohoChat';
 import IleraEkoSpotlight from '../layouts/EkoSpotLight/IleraEkoSpotLight';
-import Modal3 from '../Modal/Modal3';
 import IntentPrompt from './IntentPrompt';
 
 const Home = () => {
-  const [noticeOpen, setNoticeOpen] = useState(true);
-
   useEffect(() => {
     ReactGA.send({ hitType: 'pageview', page: window.location.pathname + window.location.search });
   }, []);
@@ -35,20 +33,20 @@ const Home = () => {
         <title>LASHMA | Your good health, Our mandate</title>
         <meta
           name="description"
-          content="Lagos State Health Management Agency. Enroll in ILERA EKO for affordable, quality healthcare across Lagos."
+          content="Lagos State Health Management Agency. Over 2 Million+ Lagos residents enrolled in ILERA EKO for affordable, quality healthcare across Lagos."
         />
         <link rel="canonical" href="https://www.lashma.com/" />
       </Helmet>
 
-      {/* Homepage-only notice modal */}
-      <Modal3 onClose={() => setNoticeOpen(false)} />
-
-      {/* Non-blocking wayfinding prompt: waits for the notice modal to be
-          dismissed first so the two never stack. */}
-      <IntentPrompt active={!noticeOpen} />
+      {/* Non-blocking wayfinding prompt */}
+      <IntentPrompt active={true} />
 
       {/* First viewport: brand story + enroll path */}
       <Hero />
+
+      {/* 2 Million+ Enrollees Major Milestone Banner */}
+      <MilestoneBanner />
+
       <YoutubeVid />
       <Testimonials />
       <About />

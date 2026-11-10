@@ -52,7 +52,7 @@ const CTABanner = () => {
           </h2>
 
           <p className="text-slate-400 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
-            Join over <strong className="text-white">1.5 million</strong> Lagos residents already protected by the ILERA EKO health scheme. Enrollment is quick, simple, and affordable.
+            Join over <strong className="text-white">2 million</strong> Lagos residents already protected by the ILERA EKO health scheme. Enrollment is quick, simple, and affordable.
           </p>
 
           {/* Buttons */}

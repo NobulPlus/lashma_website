@@ -4,8 +4,10 @@ import { CalendarDays, ExternalLink, FileText, Newspaper } from 'lucide-react';
 import ekosha from '../../../assets/doc/ekosha.pdf';
 import EKSbulletinQ3 from '../../../assets/doc/EKOSHANewsBulletinQ32024 - converted.pdf';
 import ileraEkoNewsletter from '../../../assets/doc/ilera-eko-newsletter-2026.pdf';
+import ileraEkoQ3Newsletter from '../../../assets/doc/ilera-eko-q3-quality-newsletter-2026.pdf';
 import drugFormulary from '../../../assets/doc/ilera-eko-drug-formulary.pdf';
 import ileraEkoNewsletterPreview from '../../../assets/images/ilera-eko-newsletter-2026-preview.jpg';
+import ileraEkoQ3NewsletterPreview from '../../../assets/images/ilera-eko-q3-newsletter-2026-preview.jpg';
 
 const resources = [
   {
@@ -22,19 +24,30 @@ const resources = [
 
 const newsletters = [
   {
-    title: 'ILERA EKO Newsletter',
+    title: 'ILERA EKO Quality Assurance Newsletter',
+    edition: 'Third Quarter 2026 Edition',
+    date: 'September 2026',
+    pages: '5 pages',
+    description: 'Quarter 3 quality improvement highlights, Dr. Emmanuella Zamba’s executive message, pre-empanelment assessments across 35 facilities, climbing the quality ladder, World Patient Safety Day, and clinical audits.',
+    fileUrl: ileraEkoQ3Newsletter,
+    image: ileraEkoQ3NewsletterPreview,
+    featured: true,
+  },
+  {
+    title: 'ILERA EKO Newsletter — Q2 2026',
     edition: 'Second Quarter 2026 Edition',
     date: 'June 2026',
     pages: '30 pages',
-    description: 'Latest LASHMA and ILERA EKO updates, highlights, recognition stories, and health insurance programme activities across Lagos State.',
+    description: 'LASHMA and ILERA EKO updates, milestones, recognition stories, and health insurance programme activities across Lagos State.',
     fileUrl: ileraEkoNewsletter,
     image: ileraEkoNewsletterPreview,
-    featured: true,
+    featured: false,
   },
   {
     title: 'EKOSHA News Bulletin Q3 2024',
     description: 'Quarterly updates and stories from the EKOSHA program.',
     fileUrl: EKSbulletinQ3,
+    featured: false,
   },
 ];
 
@@ -158,7 +171,7 @@ const ResoucesPage = () => {
 
             <div className="mt-6 space-y-4">
               {archivedNewsletters.map((resource) => (
-                <DocumentCard key={resource.title} resource={resource} label="Open bulletin" />
+                <DocumentCard key={resource.title} resource={resource} label="Open newsletter" />
               ))}
             </div>
           </section>
