@@ -7,7 +7,7 @@ import ileraEkoNewsletter from '../../../assets/doc/ilera-eko-newsletter-2026.pd
 import ileraEkoQ3Newsletter from '../../../assets/doc/ilera-eko-q3-quality-newsletter-2026.pdf';
 import drugFormulary from '../../../assets/doc/ilera-eko-drug-formulary.pdf';
 import ileraEkoNewsletterPreview from '../../../assets/images/ilera-eko-newsletter-2026-preview.jpg';
-import ileraEkoQ3NewsletterPreview from '../../../assets/images/ilera-eko-q3-newsletter-2026-preview.jpg';
+import ileraEkoQ3NewsletterPreview from '../../../assets/images/ilera-eko-q3-newsletter-preview.jpg';
 
 const resources = [
   {
@@ -28,7 +28,7 @@ const newsletters = [
     edition: 'Third Quarter 2026 Edition',
     date: 'September 2026',
     pages: '5 pages',
-    description: 'Quarter 3 quality improvement highlights, Dr. Emmanuella Zamba’s executive message, pre-empanelment assessments across 35 facilities, climbing the quality ladder, World Patient Safety Day, and clinical audits.',
+    description: 'Quarter 3 quality improvement highlights, Dr. Emmanuella Zamba’s executive message, pre-empanelment assessments across 35 facilities, climbing the quality ladder, World Patient Safety Day, and clinical audit gallery.',
     fileUrl: ileraEkoQ3Newsletter,
     image: ileraEkoQ3NewsletterPreview,
     featured: true,
@@ -38,9 +38,8 @@ const newsletters = [
     edition: 'Second Quarter 2026 Edition',
     date: 'June 2026',
     pages: '30 pages',
-    description: 'LASHMA and ILERA EKO updates, milestones, recognition stories, and health insurance programme activities across Lagos State.',
+    description: 'Second Quarter 2026 LASHMA updates, milestones, recognition stories, and health insurance programme activities across Lagos State.',
     fileUrl: ileraEkoNewsletter,
-    image: ileraEkoNewsletterPreview,
     featured: false,
   },
   {
