@@ -24,11 +24,11 @@ const resources = [
 
 const newsletters = [
   {
-    title: 'ILERA EKO Quality Assurance Newsletter',
+    title: 'ILERA EKO Newsletter',
     edition: 'Third Quarter 2026 Edition',
     date: 'September 2026',
     pages: '5 pages',
-    description: 'Quarter 3 quality improvement highlights, Dr. Emmanuella Zamba’s executive message, pre-empanelment assessments across 35 facilities, climbing the quality ladder, World Patient Safety Day, and clinical audit gallery.',
+    description: 'Quarter 3 ILERA EKO quality improvement highlights, Dr. Emmanuella Zamba’s executive message, pre-empanelment assessments across 35 facilities, climbing the quality ladder, World Patient Safety Day, and clinical audit gallery.',
     fileUrl: ileraEkoQ3Newsletter,
     image: ileraEkoQ3NewsletterPreview,
     featured: true,
