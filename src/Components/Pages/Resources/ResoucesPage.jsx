@@ -7,7 +7,7 @@ import ileraEkoNewsletter from '../../../assets/doc/ilera-eko-newsletter-2026.pd
 import ileraEkoQ3Newsletter from '../../../assets/doc/ilera-eko-q3-quality-newsletter-2026.pdf';
 import drugFormulary from '../../../assets/doc/ilera-eko-drug-formulary.pdf';
 import ileraEkoNewsletterPreview from '../../../assets/images/ilera-eko-newsletter-2026-preview.jpg';
-import ileraEkoQ3NewsletterPreview from '../../../assets/images/ilera-eko-q3-newsletter-preview.jpg';
+import ileraEkoQ3NewsletterPreview from '../../../assets/images/ilera-eko-q3-newsletter-cover.jpeg';
 
 const resources = [
   {
@@ -28,7 +28,7 @@ const newsletters = [
     edition: 'Third Quarter 2026 Edition',
     date: 'September 2026',
     pages: '5 pages',
-    description: 'Quarter 3 ILERA EKO quality improvement highlights, Dr. Emmanuella Zamba’s executive message, pre-empanelment assessments across 35 facilities, climbing the quality ladder, World Patient Safety Day, and clinical audit gallery.',
+    description: 'A message from the Permanent Secretary, Dr. Emmanuella Zamba, on the quarter’s progress towards Universal Health Coverage, and LASHMA’s new collaboration with Pathfinder International to improve maternal health and reduce maternal mortality across Lagos State.',
     fileUrl: ileraEkoQ3Newsletter,
     image: ileraEkoQ3NewsletterPreview,
     featured: true,
