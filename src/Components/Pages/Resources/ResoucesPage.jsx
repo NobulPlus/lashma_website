@@ -4,7 +4,7 @@ import { CalendarDays, ExternalLink, FileText, Newspaper } from 'lucide-react';
 import ekosha from '../../../assets/doc/ekosha.pdf';
 import EKSbulletinQ3 from '../../../assets/doc/EKOSHANewsBulletinQ32024 - converted.pdf';
 import ileraEkoNewsletter from '../../../assets/doc/ilera-eko-newsletter-2026.pdf';
-import ileraEkoQ3Newsletter from '../../../assets/doc/ilera-eko-q3-quality-newsletter-2026.pdf';
+import ileraEkoQ3Newsletter from '../../../assets/doc/ilera-eko-q3-newsletter-2026.pdf';
 import drugFormulary from '../../../assets/doc/ilera-eko-drug-formulary.pdf';
 import ileraEkoNewsletterPreview from '../../../assets/images/ilera-eko-newsletter-2026-preview.jpg';
 import ileraEkoQ3NewsletterPreview from '../../../assets/images/ilera-eko-q3-newsletter-cover.jpeg';
@@ -27,8 +27,8 @@ const newsletters = [
     title: 'ILERA EKO Newsletter',
     edition: 'Third Quarter 2026 Edition',
     date: 'September 2026',
-    pages: '5 pages',
-    description: 'A message from the Permanent Secretary, Dr. Emmanuella Zamba, on the quarter’s progress towards Universal Health Coverage, and LASHMA’s new collaboration with Pathfinder International to improve maternal health and reduce maternal mortality across Lagos State.',
+    pages: '31 pages',
+    description: 'A message from the Permanent Secretary, Dr. Emmanuella Zamba, LASHMA’s new collaboration with Pathfinder International on maternal health, and Q3 at a glance: 167,144 healthcare utilisations across 82,633 visits between July and September 2026.',
     fileUrl: ileraEkoQ3Newsletter,
     image: ileraEkoQ3NewsletterPreview,
     featured: true,
