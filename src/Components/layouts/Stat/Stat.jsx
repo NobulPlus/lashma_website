@@ -4,21 +4,21 @@ import ScrollTrigger from 'react-scroll-trigger';
 
 const stats = [
   {
-    value: 2000000,
+    value: 2017934,
     suffix: '+',
     label: 'Lives Covered',
     icon: 'fa-solid fa-users',
     color: 'from-orange-500 to-amber-400',
   },
   {
-    value: 645,
+    value: 842,
     suffix: '+',
     label: 'Healthcare Facilities',
     icon: 'fa-solid fa-hospital',
     color: 'from-blue-500 to-cyan-400',
   },
   {
-    value: 92547,
+    value: 94371,
     suffix: '+',
     label: 'Maternal Cases',
     icon: 'fa-solid fa-heart-pulse',
@@ -44,7 +44,7 @@ const Stat = () => {
             <span className="section-label">Impact & Reach</span>
             <h2 className="section-heading">Our Numbers Speak</h2>
             <p className="section-subheading">
-              We have over 640 Healthcare Facilities and more than 2 million lives registered on the scheme, with numbers continuing to grow.
+              We have over 840 Healthcare Facilities and more than 2.01 million lives registered on the scheme as of the end of October 2026, with numbers continuing to grow.
             </p>
           </div>
 

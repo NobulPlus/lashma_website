@@ -66,7 +66,7 @@ const MilestoneBanner = () => {
             {/* Description */}
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
               Every enrollee can get affordable, quality care at more than{' '}
-              <strong className="text-slate-900 font-semibold">640 approved facilities</strong> across the state.
+              <strong className="text-slate-900 font-semibold">840 approved facilities</strong> across the state.
               If you or your family are not covered yet, there is a plan for you.
             </p>
 
