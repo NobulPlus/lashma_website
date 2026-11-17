@@ -133,7 +133,7 @@ const Header = () => {
                   <li><a href="https://ileraekospotlight.com/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Ilera Eko SpotLight</a></li>
                   <li><Link to="/resources" onClick={closeMenu}>Resources</Link></li>
                   <li><Link to="/marketing-agents" onClick={closeMenu}>Marketing Agents</Link></li>
-                  <li><a href="https://verify.lshsportal.com:8283/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>LSHS Verification</a></li>
+                  <li><a href="https://portal.lshsplatform.com/verification-certificate" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>LSHS Verification</a></li>
                   <li><Link to="/provider" onClick={closeMenu}>Healthcare Provider</Link></li>
                   <li><a href="https://bit.ly/change-my-ileraeko-provider" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Change Hospital</a></li>
                 </ul>
